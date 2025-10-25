@@ -11,6 +11,10 @@ header {
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
 
+section#intro {
+    background-image: url(../media/backgroundimages/BG_medio.png);
+}
+
 section#jogos {
     text-align: center;
 }
