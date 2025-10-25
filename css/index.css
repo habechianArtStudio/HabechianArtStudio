@@ -6,5 +6,37 @@
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
+
+section#jogos {
+    text-align: center;
+}
+
+.social-icon-link {
+    width: 100px;
+    height: 100px;
+}
+
+.social-icon-img {    
+    width: 100px;
+    height: 100px;
+    background-size: 50%;
+    background-image: url(../media/linklogos/Youtube_Logo.png);
+    background-repeat: no-repeat;
+}
+
+section#final {
+    background-image: url(../media/backgroundimages/BG_escuro.png);
+    display: flex;
+}
+
+.footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a2c1d;
+            color: #f1e6d6;
+            font-size: 0.9rem;
+        }
