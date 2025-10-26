@@ -47,8 +47,38 @@ section {
     height: 40vh;
 }
 
+.kingrush-div {
+    background-image: url(../media/jogos/KR/concept/3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.labbug-div {
+    background-image: url(../media/jogos/LB/concept/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.expo2900-div {
+    background-image: url(../media/jogos/EXPO2900/concept/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .serie-section {
     height: 40vh;
+}
+
+.lixaodobairro-div {
+    background-image: url(../media/series/LB/concept/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.herancademisterios-div {
+    background-image: url(../media/series/HM/concept/1.png);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Adicionando transição explícita para o Parallax */
@@ -64,7 +94,9 @@ section {
     min-width: 100px;
     width: 100%;
     margin:auto;
-    
+    background-color: #d3b471;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(78, 48, 2);
     
     background-size: contain !important; /* 'contain' garante que a imagem inteira seja visível */
     background-repeat: no-repeat !important; 
@@ -146,24 +178,23 @@ section#intro {
     
     flex-grow: 1;
     flex-shrink: 0;
-    
     color: rgb(247, 229, 193);
     text-shadow: 1px 1px 4px black;
     font-size: smaller;
     /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
     border-radius: 0px 0px 10px 10px;
-    height: 100px;
+    height: 200px;
     align-self: center;
     background-color: #eed08ec4;
 }
 
 .main-descricao h1 {
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 2.5em;
 }
 
 .main-descricao p {
-    font-size: 1em;
+    font-size: 1.8em;
 }
 
 .text-block-main {
@@ -213,6 +244,7 @@ a.main-image-link {
     align-content: center;
 }
 
+/* SECAO DE SEPARAR AS SECTIONS DE GAMES E SERIES*/
 .separar-section {
     color: aliceblue;
     display: flex;
@@ -222,9 +254,9 @@ a.main-image-link {
     align-content: center;
     font-family: 'Arial Narrow Bold', sans-serif;
     height: 50px;
-    box-shadow: 0px 3px 10px black;
     background-image: url(../media/backgroundimages/BG_madeira.png);
     background-size: 150%;
+    box-shadow: 0px 3px 10px black;
 }
 
 .separar-section h1 {
