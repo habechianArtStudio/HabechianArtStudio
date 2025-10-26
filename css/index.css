@@ -100,19 +100,30 @@ ul#menu-list > li {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    box-shadow: 10px 10px 10px rgba(31, 21, 1, 0.568);
+    box-shadow: 2px 2px 5px rgba(59, 39, 2, 0.411);
     transition: translate 1s, box-shadow 0.5s;
 }
 
 .social-icon-img:hover {
     border-radius: 50%;
     translate: 0px -5px;
-    box-shadow: 10px 10px 10px rgba(54, 25, 1, 0.664);
+    box-shadow: 2px 2px 10px rgba(37, 25, 1, 0.808);
 }
 
 .social-icon-img {
     height: 100%;
     width: 100%;
+}
+
+.imagem-portfolio {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    background-image: url(../media/portfolio/Foto_Perfil_Insta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: solid 5px #3a2c1d;
 }
 
 .social-icon-div {
@@ -133,7 +144,7 @@ ul#menu-list > li {
     
     background-color: #beab95;
     border-radius: 50%;
-    box-shadow: 10px 10px 10px rgba(59, 39, 2, 0.411);
+    box-shadow: 2px 2px 5px rgba(59, 39, 2, 0.411);
 }
 
 .youtube-img {    
