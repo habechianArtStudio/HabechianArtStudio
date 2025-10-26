@@ -7,8 +7,10 @@
 }
 
 header {
+    height: 50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
 
@@ -22,6 +24,11 @@ section {
 
 section#intro {
     background-image: url(../media/backgroundimages/BG_medio.png);
+}
+
+#menu-list {
+    display: flex;
+    list-style: none;
 }
 
 section#jogos {
