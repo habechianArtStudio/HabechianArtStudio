@@ -50,16 +50,14 @@ menu#menu-section {
     display: none;
     flex-flow: row nowrap;
     align-items: end;
-    align-content: center;
-    justify-content: center;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
 menu#menu-section > ul {
     list-style: none;
     padding: 10px;
-    margin: 5px 0px;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5px 5px;
 }
 
 section#intro {
@@ -122,16 +120,16 @@ ul#menu-list > li {
     margin: 50px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
+    align-content: space-around;
     align-items: center;
     justify-items: center;
     
 }
 
 .social-icon-div > a {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     background-color: #beab95;
     border-radius: 50%;
