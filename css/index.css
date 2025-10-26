@@ -32,15 +32,27 @@ section#intro {
      padding-top: 20vh;
 }
 
+/*Lista do cabeçalho - menu*/
 #menu-list {
     display: flex;
     list-style: none;
+    
+}
+
+ul#menu-list > li {
+    padding: 10px;
+    
 }
 
 .separar-section {
+    display: block;
     text-align: center;
-    height: 50px;
-    background-color: #3a2c1d;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    height: 100px;
+    background-color: #7c654c;
+    color: #f1e6d6;
 }
 
 .social-icon-link {
@@ -58,15 +70,17 @@ section#intro {
 
 .logo-img {    
     position: fixed;
-    width: 100px;
-    height: 100px;
-    background-size: 70%;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
     background-image: url(../media/favicon/android-chrome-512x512.png);
     background-repeat: no-repeat;
 }
 
 .logo-img-link {    
-    
+    height: 10px;
+    width: 10px;
     
 }
 
