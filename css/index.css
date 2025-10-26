@@ -71,9 +71,32 @@ section {
 }
 
 .expo2900-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
     background-image: url(../media/jogos/EXPO2900/concept/1.png);
     background-size: cover;
-    background-position: center;
+    background-position: right;
+}
+
+.expo2900-img {
+    width: 200px;
+    height: 200px;
+    background-color: #3a2c1d;
+    align-self: center;
+    background-size: cover;
+    background-image: url(../media/jogos/EXPO2900/LOGO.png);
+    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
+
+
+    transition: transform 1s;
+}
+
+.expo2900-img:hover {
+    transform: scale(1.1);
 }
 
 
@@ -458,6 +481,9 @@ section#final {
     .social-icon-div {
         width: 70vw;
     }
+
+    
+    
     
     
     
@@ -467,9 +493,16 @@ section#final {
     .serie-section:hover {
     height: 45vh;
     }
+
     .game-section:hover {
     height: 45vh;
     }
+
+    .main-content {
+        flex-flow: row nowrap;
+    }
+
+    
 }
     
     
