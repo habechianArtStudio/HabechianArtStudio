@@ -12,6 +12,7 @@ header {
     height: 50px;
     display: flex;
     justify-content: space-between;
+    padding-right: 10%;
     align-items: center;
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
@@ -30,17 +31,20 @@ section#intro {
 
 .main-content {
      padding-top: 20vh;
+     padding-right: 5vw;
+     padding-left: 5vw;
 }
 
 /*Lista do cabeçalho - menu*/
-#menu-list {
+.menu-list {
     display: flex;
     list-style: none;
+    align-content: space-between;
     
 }
 
 ul#menu-list > li {
-    padding: 10px;
+    padding: 50px;
     
 }
 
@@ -99,3 +103,14 @@ section#final {
             color: #f1e6d6;
             font-size: 0.9rem;
         }
+
+
+@media  (max-width: 667px) {
+    .menu-list {
+        
+        display: none;
+        
+    }
+
+    
+}
