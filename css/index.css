@@ -37,7 +37,7 @@ p {
 }
 
 section {
-    height: 50vh;
+    height: 60vh;
 }
 
 .game-section {
@@ -63,6 +63,7 @@ menu#menu-section > ul {
 }
 
 section#intro {
+    
     background-image: url(../media/backgroundimages/BG_medio.png);
 }
 
@@ -98,8 +99,17 @@ ul#menu-list > li {
 }
 
 .social-icon-link {
+    border-radius: 50%;
     width: 50px;
     height: 50px;
+    box-shadow: 10px 10px 10px rgba(31, 21, 1, 0.568);
+    transition: translate 1s, box-shadow 0.5s;
+}
+
+.social-icon-img:hover {
+    border-radius: 50%;
+    translate: 0px -5px;
+    box-shadow: 10px 10px 10px rgba(54, 25, 1, 0.664);
 }
 
 .social-icon-img {
@@ -108,39 +118,63 @@ ul#menu-list > li {
 }
 
 .social-icon-div {
-    padding-top: 50px;
+    width: 80vw;
+    margin: 50px;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.social-icon-div > a {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: #beab95;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba(59, 39, 2, 0.411);
 }
 
 .youtube-img {    
-    width: 100px;
-    height: 100px;
-    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    
+    
     background-image: url(../media/linklogos/Youtube_Logo.png);
     background-repeat: no-repeat;
 }
 
 .instagram-img {    
-    width: 100px;
-    height: 100px;
-    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    
     background-image: url(../media/linklogos/Instagram_Logo.png);
     background-repeat: no-repeat;
 }
 
 .artstation-img {    
-    width: 100px;
-    height: 100px;
-    background-size: 50%;
-    background-color: var(white);
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    
     background-image: url(../media/linklogos/Artstation_Logo.png);
     background-repeat: no-repeat;
 }
 
 .caraapp-img {    
-    width: 100px;
-    height: 100px;
-    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    
     background-image: url(../media/linklogos/Cara_Logo_2.png);
     background-repeat: no-repeat;
 }
