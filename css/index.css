@@ -44,9 +44,19 @@ section {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 .game-section {
     height: 40vh;
+    
+    transition: height 1s;
 }
+
+.serie-section {
+    height: 40vh;
+    
+    transition: height 1s;
+}
+
 
 .kingrush-div {
     background-image: url(../media/jogos/KR/concept/3.png);
@@ -66,9 +76,6 @@ section {
     background-position: center;
 }
 
-.serie-section {
-    height: 40vh;
-}
 
 .lixaodobairro-div {
     background-image: url(../media/series/LB/concept/1.png);
@@ -238,7 +245,7 @@ ul#menu-list > li {
 
 
 a.main-image-link {
-    padding: 15px;
+    padding: 25px;
     align-self: center;
     display: flex;
     flex-grow: 0;
@@ -453,7 +460,22 @@ section#final {
     }
     
     
+    
 }
+
+@media  (min-width: 1080px) {
+    .serie-section:hover {
+    height: 45vh;
+    }
+    .game-section:hover {
+    height: 45vh;
+    }
+}
+    
+    
+
+
+
 
 .text-shadow-pop-top {
 	-webkit-animation: text-shadow-pop-top 0.6s both;
