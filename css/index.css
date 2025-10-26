@@ -254,6 +254,8 @@ a.main-image-link {
     align-content: center;
     font-family: 'Arial Narrow Bold', sans-serif;
     height: 50px;
+    border-top: solid 3px #e9dcce;
+    border-bottom: solid 3px #e9dcce;
     background-image: url(../media/backgroundimages/BG_madeira.png);
     background-size: 150%;
     box-shadow: 0px 3px 10px black;
@@ -261,7 +263,10 @@ a.main-image-link {
 
 .separar-section h1 {
     align-self: center;
+    font-size: 1.8em;
     background-color: #a17546;
+    text-shadow: 1px 2px 0px rgba(39, 22, 2, 0.753);
+    border: solid 2px #e9dcce;
     width: 55vw;
     border-radius: 10px;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.555);
