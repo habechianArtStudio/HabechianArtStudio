@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="css/index.css">
 </head>
+
+
 <body>
 <header id="iheader">
     <div class="logo-img-link">
@@ -34,11 +36,24 @@
     </ul>
 
     
-    <i id="burger" class="material-symbols-outlined">menu</i>
+    <i id="burger" class="material-symbols-outlined" onclick="menuClick()">menu</i>
 
 </header>
+
 <main>
-    
+        <menu id="menu-section" class="menu-section">
+            <ul>
+                <li>
+                    <a href="#intro">Início</a>
+                </li>
+                <li>
+                    Portfólio
+                </li>
+                <li>
+                    Contato
+                </li>
+            </ul>
+        </menu>  
         <section id="intro">
             <div class="main-content">
         
@@ -94,5 +109,12 @@
     <footer class="footer">
         © 2025 Habechian Art Studio. Todos os direitos reservados.
     </footer>
+
+    <script src="js/index.js" defer>
+
+    </script>
 </body>
+
+
+
 </html>
