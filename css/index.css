@@ -63,17 +63,6 @@ section#intro {
     
 }
 
-i#burger {
-    display: none;
-    border-radius: 5px;
-    transition: color 0.5s, background-color 0.5s;
-}
-
-i#burger:hover {
-    color: rgb(224, 223, 215);
-    background-color: #7c654c;
-    cursor: pointer;
-}
 
 ul#menu-list > li {
     padding: 50px;
