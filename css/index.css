@@ -61,14 +61,38 @@ menu#menu-section > ul {
 }
 
 section#intro {
-    
-    background-image: url(../media/backgroundimages/BG_medio.png);
+    align-self: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../media/jogos/KR/concept/1.png);
 }
 
 .main-content {
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
      padding-top: 20vh;
      padding-right: 5vw;
      padding-left: 5vw;
+}
+
+.main-separacao {
+    width: 50vw;
+    height: 50px;
+    align-self: center;
+    background-color: #3a2c1d;
+}
+
+.main-descricao {
+    box-shadow: 5px 5px 10px rgba(32, 13, 1, 0.733);
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.705);
+    width: 50vw;
+    align-self: center;
+    background-color: #7c654c;
 }
 
 /*Lista do cabeçalho - menu*/
@@ -83,6 +107,25 @@ section#intro {
 ul#menu-list > li {
     padding: 50px;
     
+}
+
+.main-image-logo {
+    margin: 10px;
+    height: 200px;
+    width: 200px;    
+    background-position: center;
+    background-size: contain;    
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url(../media/jogos/KR/LOGO.png);
+}
+
+.main-image-link {
+    width: 30vw;
+    align-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .separar-section {
@@ -116,7 +159,24 @@ ul#menu-list > li {
 }
 
 a.button-portfolio {
+    color: rgb(216, 187, 151);
     text-decoration: none;
+    background-color: #7c654c;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 3px rgb(51, 37, 2);
+    box-shadow: 2px 2px 7px rgba(31, 15, 1, 0.753);
+
+}
+
+a.button-portfolio:hover {
+    translate: 0px -3px;
+    transform: scale(1.05);
+    border: solid 3px aliceblue;
+    box-shadow: 2px 2px 7px rgba(31, 15, 1, 0.911);
+    color: aliceblue;
+    background-color: #a17546;
+
 }
 
 .imagem-portfolio {
