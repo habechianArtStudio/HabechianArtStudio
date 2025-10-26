@@ -7,6 +7,8 @@
 }
 
 header {
+    position: fixed;
+    width: 100vw;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -24,6 +26,10 @@ section {
 
 section#intro {
     background-image: url(../media/backgroundimages/BG_medio.png);
+}
+
+.main-content {
+     padding-top: 20vh;
 }
 
 #menu-list {
@@ -50,12 +56,18 @@ section#intro {
     background-repeat: no-repeat;
 }
 
-.youtube-img {    
+.logo-img {    
+    position: fixed;
     width: 100px;
     height: 100px;
-    background-size: 50%;
-    background-image: url(../media/linklogos/Youtube_Logo.png);
+    background-size: 70%;
+    background-image: url(../media/favicon/android-chrome-512x512.png);
     background-repeat: no-repeat;
+}
+
+.logo-img-link {    
+    
+    
 }
 
 section#final {
