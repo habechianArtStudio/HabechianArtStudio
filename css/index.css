@@ -115,12 +115,18 @@ ul#menu-list > li {
     width: 100%;
 }
 
+a.button-portfolio {
+    text-decoration: none;
+}
+
 .imagem-portfolio {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    aspect-ratio: 1;
     margin: 10px;
     background-image: url(../media/portfolio/Foto_Perfil_Insta.jpg);
     background-repeat: no-repeat;
+    position: relative;
     background-size: cover;
     border-radius: 50%;
     border: solid 5px #3a2c1d;
