@@ -44,6 +44,10 @@ section {
     height: 40vh;
 }
 
+.serie-section {
+    height: 40vh;
+}
+
 menu#menu-section {
     background-image: url(../media/backgroundimages/BG_escuro.png);
     height: 10vh;
@@ -61,7 +65,13 @@ menu#menu-section > ul {
 }
 
 section#intro {
+    height: 70vh;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-content: space-between;
     align-self: center;
+    flex-grow: 0;
+    flex-shrink: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -69,28 +79,34 @@ section#intro {
 }
 
 .main-content {
-    
+    padding-bottom: 20px;
     display: flex;
     flex-flow: column nowrap;
-    align-content: center;
-    justify-content: center;
-     padding-top: 20vh;
+    align-content: flex-end;
+    justify-content: flex-end;
+     
      padding-right: 5vw;
      padding-left: 5vw;
 }
 
 .main-separacao {
-    width: 50vw;
-    height: 50px;
+    width: 70vw;
     align-self: center;
+    height: 20px;
     background-color: #3a2c1d;
 }
 
 .main-descricao {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    flex-shrink: 0;
     box-shadow: 5px 5px 10px rgba(32, 13, 1, 0.733);
     color: aliceblue;
+    font-size: smaller;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.705);
-    width: 50vw;
+    width: 70vw;
+    height: 100px;
     align-self: center;
     background-color: #7c654c;
 }
@@ -110,7 +126,7 @@ ul#menu-list > li {
 }
 
 .main-image-logo {
-    margin: 10px;
+    
     height: 200px;
     width: 200px;    
     background-position: center;
@@ -271,6 +287,7 @@ a.button-portfolio:hover {
 }
 
 section#final {
+    height: 70vh;
     background-image: url(../media/backgroundimages/BG_escuro.png);
     display: flex;
     flex-flow: column nowrap;
