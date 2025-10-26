@@ -31,8 +31,10 @@ section#intro {
     list-style: none;
 }
 
-section#jogos {
+.separar-section {
     text-align: center;
+    height: 50px;
+    background-color: #3a2c1d;
 }
 
 .social-icon-link {
@@ -40,7 +42,15 @@ section#jogos {
     height: 100px;
 }
 
-.social-icon-img {    
+.youtube-img {    
+    width: 100px;
+    height: 100px;
+    background-size: 50%;
+    background-image: url(../media/linklogos/Youtube_Logo.png);
+    background-repeat: no-repeat;
+}
+
+.youtube-img {    
     width: 100px;
     height: 100px;
     background-size: 50%;
