@@ -12,6 +12,14 @@ header {
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
 
+main {
+    text-align: center;
+}
+
+section {
+    height: 70vh;
+}
+
 section#intro {
     background-image: url(../media/backgroundimages/BG_medio.png);
 }
