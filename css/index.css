@@ -68,7 +68,8 @@ section#intro {
     height: 70vh;
     display: flex;
     flex-flow: column-reverse nowrap;
-    align-content: space-between;
+    align-content: center;
+    justify-content: center;
     align-self: center;
     flex-grow: 0;
     flex-shrink: 1;
@@ -82,33 +83,39 @@ section#intro {
     padding-bottom: 20px;
     display: flex;
     flex-flow: column nowrap;
-    align-content: flex-end;
-    justify-content: flex-end;
+    align-content: center;
+    justify-content: center;
      
      padding-right: 5vw;
      padding-left: 5vw;
 }
 
 .main-separacao {
-    width: 70vw;
+    
     align-self: center;
     height: 20px;
     background-color: #3a2c1d;
 }
 
 .main-descricao {
-    display: flex;
-    flex-flow: column nowrap;
+    
     flex-grow: 1;
     flex-shrink: 0;
-    box-shadow: 5px 5px 10px rgba(32, 13, 1, 0.733);
-    color: aliceblue;
+    
+    color: rgb(73, 64, 46);
     font-size: smaller;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.705);
-    width: 70vw;
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
+    
     height: 100px;
     align-self: center;
-    background-color: #7c654c;
+    background-image: url(../media/backgroundimages/BG_escuro.png);
+}
+
+.text-block-main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-self: center;
+    width: 70vw;
+    box-shadow: 5px 5px 10px rgba(32, 13, 1, 0.733);
 }
 
 /*Lista do cabeçalho - menu*/
@@ -147,6 +154,7 @@ ul#menu-list > li {
 .separar-section {
     display: block;
     text-align: center;
+    text-justify: center;
     justify-content: center;
     align-content: center;
     font-family: 'Arial Narrow Bold', sans-serif;
@@ -209,7 +217,7 @@ a.button-portfolio:hover {
 }
 
 .social-icon-div {
-    width: 70vw;
+    width: 25vw;
     margin: 50px;
     display: flex;
     flex-flow: row nowrap;
@@ -287,6 +295,7 @@ a.button-portfolio:hover {
 }
 
 section#final {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 70vh;
     background-image: url(../media/backgroundimages/BG_escuro.png);
     display: flex;
@@ -311,9 +320,9 @@ section#final {
         
     }
 
-    i#burger {
-        display: block;
+    .social-icon-div {
+        width: 70vw;
     }
-
+    
     
 }
