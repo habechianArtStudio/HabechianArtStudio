@@ -80,9 +80,16 @@ section {
     background-position: right;
 }
 
+.expo2900-div div {
+    height: 50px;
+    width: 50px;
+    align-self: center;
+    color: aliceblue;
+}
+
 .expo2900-img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: #3a2c1d;
     align-self: center;
     background-size: cover;
@@ -249,9 +256,16 @@ section#intro {
 }
 
 
-ul#menu-list > li {
-    padding: 50px;
+ul.menu-list > li {
+    margin: 5px;
+    padding: 5px;
+    background-color: #94724d;
+    border-radius: 6px;
     
+}
+
+ul.menu-list > li:hover {
+    background-color: #e0a361;
 }
 
 .main-image-logo {
@@ -470,6 +484,7 @@ section#final {
             font-size: 0.9rem;
         }
 
+/* QUANDO FICAR PEQUENO */
 
 @media  (max-width: 1080px) {
     .menu-list {
@@ -482,6 +497,12 @@ section#final {
         width: 70vw;
     }
 
+    .expo2900-descricao-div {
+        display: none;
+    }
+
+    
+
     
     
     
@@ -489,6 +510,7 @@ section#final {
     
 }
 
+/* QUANDO FICAR GRANDE */
 @media  (min-width: 1080px) {
     .serie-section:hover {
     height: 45vh;
@@ -502,6 +524,19 @@ section#final {
         flex-flow: row nowrap;
     }
 
+    .expo2900-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .expo2900-div {
+        align-content: space-around;
+        justify-content: space-around;
+    }
+
+    .expo2900-descricao-div {
+        display: block;
+    }
     
 }
     
