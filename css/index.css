@@ -28,7 +28,7 @@ header {
 
 header p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 main {
@@ -553,11 +553,13 @@ section#final {
     }
 
     .serie-section:hover {
-    height: 45vh;
+    height: 50vh;
+    
     }
 
     .game-section:hover {
-    height: 45vh;
+    height:50vh;
+    
     }
 
     .main-content {
