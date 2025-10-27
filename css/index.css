@@ -382,7 +382,7 @@ a.button-portfolio {
 
 a.button-portfolio:hover {
     translate: 0px -3px;
-    transform: scale(1.05);
+    transform: scale(1, 1.05);
     border: solid 3px aliceblue;
     box-shadow: 2px 2px 7px rgba(31, 15, 1, 0.911);
     color: aliceblue;
@@ -495,13 +495,31 @@ section#final {
     align-items: center;
 }
 
+.name-photo-div {
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
 .final-div {
-    height: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    text-justify: center;
+    height: 60vh;
     width: 60vw;
     display: flex;
     flex-flow: column nowrap;
     align-content: center;
     justify-content: center;
+}
+
+.final-div h1 {
+    text-align: justify;
 }
 
 .footer {
@@ -528,6 +546,13 @@ section#final {
     .expo2900-descricao-div {
         display: none;
     }
+
+    .expo2900-div div {
+    height: 0px;
+    width: 0px;
+    
+    
+}
 
     
 
