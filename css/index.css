@@ -366,7 +366,8 @@ a.main-image-link:hover {
 
 a.button-portfolio {
     color: rgb(73, 58, 40);
-    width: 40%;
+    text-align: center;
+    width: 50%;
     align-self: center;
     text-decoration: none;
     background-color: #c2b5a1;
