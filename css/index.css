@@ -26,6 +26,11 @@ header {
     background-image: url(../media/backgroundimages/BG_claro.png);
 }
 
+header p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
 main {
     text-align: center;
 }
@@ -266,13 +271,15 @@ section#intro {
 ul.menu-list > li {
     margin: 5px;
     padding: 5px;
-    background-color: #94724d;
     border-radius: 6px;
+
+    transition: translate 0.3s;
     
 }
 
 ul.menu-list > li:hover {
-    background-color: #e0a361;
+    translate: 0px -5px;
+    cursor: pointer;
 }
 
 .main-image-logo {
@@ -535,6 +542,11 @@ section#final {
     header {
         height: 80px;
     }
+
+    header p {
+    font-size: 3em;
+}
+
     .logo-img {
         height: 80px;
         width: 80px;
