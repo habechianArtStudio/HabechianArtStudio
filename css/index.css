@@ -78,13 +78,20 @@ section {
     background-image: url(../media/jogos/EXPO2900/concept/1.png);
     background-size: cover;
     background-position: right;
+    
 }
 
 .expo2900-div div {
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 500px;
     align-self: center;
     color: aliceblue;
+    
+}
+
+.expo2900-descricao-div {
+    background-color: #8ed3eec4;
+    border-radius: 15px;
 }
 
 .expo2900-img {
@@ -352,6 +359,8 @@ a.main-image-link:hover {
 
 a.button-portfolio {
     color: rgb(73, 58, 40);
+    width: 40%;
+    align-self: center;
     text-decoration: none;
     background-color: #c2b5a1;
     padding: 10px;
@@ -374,10 +383,12 @@ a.button-portfolio:hover {
 }
 
 .imagem-portfolio {
+    align-self: center;
     height: 100px;
     width: 100px;
     aspect-ratio: 1;
     margin: 10px;
+    padding: 15px;
     background-image: url(../media/portfolio/Foto_Perfil_Insta.jpg);
     background-repeat: no-repeat;
     position: relative;
@@ -476,6 +487,15 @@ section#final {
     align-items: center;
 }
 
+.final-div {
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
 .footer {
             text-align: center;
             padding: 20px;
@@ -512,6 +532,14 @@ section#final {
 
 /* QUANDO FICAR GRANDE */
 @media  (min-width: 1080px) {
+    header {
+        height: 80px;
+    }
+    .logo-img {
+        height: 80px;
+        width: 80px;
+    }
+
     .serie-section:hover {
     height: 45vh;
     }
