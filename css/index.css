@@ -64,15 +64,47 @@ section {
 
 
 .kingrush-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
     background-image: url(../media/jogos/KR/concept/3.png);
     background-size: cover;
     background-position: center;
 }
 
+.kingrush-img {
+    width: 150px;
+    height: 150px;
+    background-color: #3a2c1d;
+    align-self: center;
+    background-size: cover;
+    background-image: url(../media/jogos/KR/LOGO.png);
+    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
+}
+
 .labbug-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
     background-image: url(../media/jogos/LB/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.labbug-img {
+    width: 150px;
+    height: 150px;
+    background-color: #3a2c1d;
+    align-self: center;
+    background-size: cover;
+    background-image: url(../media/jogos/LB/LOGO_2.png);
+    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
 }
 
 .expo2900-div {
@@ -95,8 +127,9 @@ section {
 }
 
 .expo2900-descricao-div {
-    background-color: #8ed3eec4;
+    background-color: #c5dee777;
     border-radius: 15px;
+    border: solid 2px rgb(223, 227, 228);
 }
 
 .expo2900-img {
@@ -120,9 +153,25 @@ section {
 
 
 .lixaodobairro-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
     background-image: url(../media/series/LB/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.lixaodobairro-img {
+    width: 150px;
+    height: 150px;
+    background-color: #3a2c1d;
+    align-self: center;
+    background-size: cover;
+    background-image: url(../media/series/LB/LOGO.png);
+    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
 }
 
 .herancademisterios-div {
