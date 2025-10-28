@@ -66,11 +66,19 @@ section {
 .kingrush-div {
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     background-image: url(../media/jogos/KR/concept/3.png);
     background-size: cover;
     background-position: center;
+}
+
+.kingrush-descricao-div {
+    background-color: #c5dee777;
+    border-radius: 15px;
+    border: solid 2px rgb(223, 227, 228);
+    align-self: center;
+    height: 40%;
 }
 
 .kingrush-img {
@@ -82,17 +90,29 @@ section {
     background-image: url(../media/jogos/KR/LOGO.png);
     box-shadow: 7px 7px 0px rgb(53, 31, 2);
     border-radius: 25px;
-    border: solid 3px aliceblue;
+    border: solid 3px aliceblue; transition: transform 1s;
+}
+
+.kingrush-img:hover {
+    transform: scale(1.1);
 }
 
 .labbug-div {
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     background-image: url(../media/jogos/LB/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.labbug-descricao-div {
+    background-color: #c5dee777;
+    border-radius: 15px;
+    border: solid 2px rgb(223, 227, 228);
+    height: 30%;
+    align-self: center;
 }
 
 .labbug-img {
@@ -105,6 +125,12 @@ section {
     box-shadow: 7px 7px 0px rgb(13, 31, 19);
     border-radius: 25px;
     border: solid 3px aliceblue;
+
+    transition: transform 1s;
+}
+
+.labbug-img:hover {
+    transform: scale(1.1);
 }
 
 .expo2900-div {
@@ -625,7 +651,7 @@ section#final {
 
 .final-div {
     align-items: center;
-    align-content: center;
+    align-content: flex-end;
     text-align: center;
     text-justify: center;
     height: 60vh;
@@ -668,10 +694,19 @@ section#final {
     .expo2900-div div {
     height: 0px;
     width: 0px;
-    
-    
 
-    
+    }
+
+    .labbug-descricao-div {
+        display: none;
+    }
+
+    .kingrush-descricao-div {
+        display: none;
+    }
+
+    .final-div {
+        justify-content: flex-end;
     }
 
     
@@ -692,6 +727,10 @@ section#final {
     .logo-img {
         height: 80px;
         width: 80px;
+    }
+
+    a.button-portfolio {
+        width: 20%;
     }
 
     .serie-section:hover {
