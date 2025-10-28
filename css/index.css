@@ -80,7 +80,7 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/KR/LOGO.png);
-    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    box-shadow: 7px 7px 0px rgb(53, 31, 2);
     border-radius: 25px;
     border: solid 3px aliceblue;
 }
@@ -169,15 +169,36 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/series/LB/LOGO.png);
-    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    box-shadow: 7px 7px 0px rgb(82, 64, 8);
     border-radius: 25px;
     border: solid 3px aliceblue;
 }
 
 .herancademisterios-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
     background-image: url(../media/series/HM/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.herancademisterios-img {
+    width: 150px;
+    height: 150px;
+    background-color: #3a2c1d;
+    align-self: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../media/series/HM/LOGO.png);
+    box-shadow: 7px 7px 0px rgb(116, 71, 4);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
+
+
+    transition: transform 1s;
 }
 
 /* Adicionando transição explícita para o Parallax */
@@ -220,6 +241,40 @@ section {
     padding: center;
 }
 
+.initial-button-img {
+    height: 50px;
+    width: 50px;
+    background-image: url(../media/interface/Seta_2.png);
+    background-color: #4b3014;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 5px 3px 0px #221303;
+    align-self: center;
+
+    transition: transform 0.3s;
+}
+
+.initial-button-img:hover {
+    transform: scale(1.1);
+}
+
+.final-button-img {
+    height: 50px;
+    width: 50px;
+    background-image: url(../media/interface/Seta.png);
+    background-size: cover;
+    background-color: #4b3014;
+    border-radius: 50%;
+    box-shadow: 5px 3px 0px #221303;
+    align-self: center;
+
+    transition: transform 0.3s;
+}
+
+.final-button-img:hover {
+    transform: scale(1.1);
+}
+
 
 menu#menu-section {
     background-image: url(../media/backgroundimages/BG_escuro.png);
@@ -241,8 +296,8 @@ section#intro {
     height: 70vh;
     display: flex;
     flex-flow: column-reverse nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     align-self: center;
     flex-grow: 0;
     flex-shrink: 1;
@@ -252,16 +307,30 @@ section#intro {
     background-image: url(../media/jogos/KR/concept/1.png);
 }
 
+.logo-button-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
 .main-content {
     padding-bottom: 20px;
     display: flex;
     flex-flow: column nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     flex-grow: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
     padding-right: 5vw;
     padding-left: 5vw;
+}
+
+.logo-button-div{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .main-separacao {
@@ -277,8 +346,8 @@ section#intro {
 
 .main-descricao {
     
-    flex-grow: 1;
-    flex-shrink: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
     color: aliceblue;
     text-shadow: 1px 1px 4px black;
     font-size: smaller;
@@ -441,8 +510,8 @@ a.button-portfolio:hover {
 
 .imagem-portfolio {
     align-self: center;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     aspect-ratio: 1;
     margin: 10px;
     padding: 15px;
@@ -601,15 +670,13 @@ section#final {
     width: 0px;
     
     
-}
+
+    
+    }
 
     
 
-    
-    
-    
-    
-    
+   
 }
 
 /* QUANDO FICAR GRANDE */
@@ -639,6 +706,12 @@ section#final {
 
     .main-content {
         flex-flow: row nowrap;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    .text-block-main {
+        margin-left: 20px;
     }
 
     .expo2900-img {
@@ -654,6 +727,8 @@ section#final {
     .expo2900-descricao-div {
         display: block;
     }
+
+    
     
 }
     
