@@ -779,15 +779,25 @@ section#final {
     
 }
 
-@media (min-width: 700px) and (max-height: 400px) {
+@media (min-width: 700px) and (max-height: 420px) {
     .final-div {
+        padding-top: 40vh;
         flex-flow: row nowrap;
-        justify-content: space-around;
-        align-content: space-around;
+        justify-content: flex-end;
+        align-content: flex-end;
     }
 
     .name-photo-div {
-        flex-flow: column nowrap;
+        flex-flow: row-reverse nowrap;
+        
+    }
+
+    a.button-portfolio {
+        margin: 10px;
+    }
+
+    .social-icon-div {
+        padding-bottom: 80px;
     }
 }
 */
