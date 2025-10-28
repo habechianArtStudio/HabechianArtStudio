@@ -633,7 +633,7 @@ a.button-portfolio:hover {
 
 section#final {
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
     height: 70vh;
@@ -776,6 +776,18 @@ section#final {
 
     
     
+}
+
+@media (min-width:1080px) and (max-height:600px) {
+    .final-div {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-content: space-around;
+    }
+
+    .name-photo-div {
+        flex-flow: column nowrap;
+    }
 }
     
     
