@@ -282,6 +282,8 @@ section {
 
 .initial-button-img:hover {
     transform: scale(1.1);
+    border: solid 2px aliceblue;
+    cursor: pointer;
 }
 
 .final-button-img {
@@ -299,6 +301,8 @@ section {
 
 .final-button-img:hover {
     transform: scale(1.1);
+    border: solid 2px aliceblue;
+    cursor: pointer;
 }
 
 
@@ -564,7 +568,7 @@ a.button-portfolio:hover {
 .social-icon-div > a {
     width: 50px;
     height: 50px;
-    
+    align-self: flex-start;
     background-color: #beab95;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(59, 39, 2, 0.411);
@@ -629,6 +633,7 @@ a.button-portfolio:hover {
 
 section#final {
     padding-top: 10px;
+    padding-bottom: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
     height: 70vh;
@@ -636,7 +641,9 @@ section#final {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    align-content: center;
     align-items: center;
+    justify-items: center;
 }
 
 .name-photo-div {
