@@ -14,6 +14,7 @@
 }
 
 header {
+    z-index: 10;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     position: fixed;
@@ -432,8 +433,8 @@ section#intro input {
 .logo-button-div{
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
 }
 
 .main-separacao {
@@ -448,7 +449,7 @@ section#intro input {
 }
 
 .main-separacao-2 {
-    
+    width: 100%;
     align-self: center;
     height: 20px;
     background-image: url(../media/backgroundimages/BG_madeira.png);
@@ -475,12 +476,14 @@ section#intro input {
     background-color: #eed08ec4;
 }
 
+
 .main-descricao-2 {
-    
+    display: flex;
+    flex-flow: column nowrap;
     flex-grow: 0;
     flex-shrink: 1;
     color: aliceblue;
-    text-shadow: 1px 2px 0px black;
+    
     font-size: smaller;
     /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
     border-radius: 10px 10px 10px 10px;
@@ -489,6 +492,37 @@ section#intro input {
     align-self: center;
     background-color: #dfcda6a2;
 }
+
+.main-descricao-2 a {
+    font-size: 2em;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    text-decoration: none;
+    color: rgb(170, 135, 102);
+    background-color: #855d33;
+    border: solid 4px rgb(151, 119, 89);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 6px 0px #221303a4;
+
+    transition: all 0.5s;
+}
+
+.main-descricao-2 a:hover {
+    border: solid 4px aliceblue;
+    box-shadow: 10px 15px 0px #221303a4;
+    font-size: 2.2em;
+    color: aliceblue;
+    background-color: #a0743b;
+    transform: scale(1.05);
+}
+
+
 
 .main-descricao-2 h2 {
     color: #f0eed2;
@@ -893,6 +927,30 @@ section#final {
     header p {
     font-size: 3em;
 }
+
+    .name-photo-div {
+        padding: 25px;
+    }
+    
+    .button-portfolio {
+        margin: 15px;
+    }
+
+    .main-image-link {
+        width: 400px;
+    }
+
+    .logo-button-div {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    .text-block-main {
+    width: 40vw;
+    
+    
+    
+    }
 
     .logo-img {
         height: 80px;
