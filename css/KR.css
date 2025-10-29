@@ -4,6 +4,7 @@
     --cor-botao: rgb(138, 95, 67);
     --cor-botao-sombra: rgb(78, 54, 21);
     --cor-text-botao: rgb(214, 180, 145);
+    --cor-text: rgba(202, 169, 135, 0.726);
 }
 
 * {
@@ -31,6 +32,55 @@ header {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
 }
 
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../media/backgroundimages/kingrush_padrao.png);
+    background-size: 40%;
+    overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
+    
+    
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 40vh;
+    width: 100vw;
+    
+    
+}
+
+p {
+    color: aliceblue;
+    text-justify: center;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    height: 40%;
+    width: 40vw;
+    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
+    font-size: 1.2em;
+    background-color: var(--cor-text);
+    border-radius: 10px;
+}
+
+.horizontal-section {
+    
+}
+.horizontal-section img {
+    
+}
+
+.vertical-section {
+    
+}
+
 .logo-div {
     display: flex;
     justify-content: center;
@@ -50,36 +100,6 @@ header {
 .logo-div a {
     height: 100px;
     width: 100px;
-}
-
-
-body {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(../media/backgroundimages/kingrush_padrao.png);
-    background-size: 40%;
-    overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
-    
-    
-}
-
-section {
-    height: 40vh;
-    width: 100vw;
-    
-    
-}
-
-p {
-    text-justify: center;
-    text-align: center;
-    padding: 10px;
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    width: 40vw;
-    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
-    font-size: 1.2em;
 }
 
 .botao-retorne {
@@ -119,7 +139,7 @@ section.section-apresentation {
 }
 
 .section-apresentation h1 {
-    
+    margin: 10px;
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
 }
 
@@ -159,6 +179,25 @@ section.section-apresentation {
     justify-content: center;
 }
 
+.img-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 60%;
+    width: 100vw;
+}
+
+.img-div > img {
+    height: 90%;
+    width: 80vw;
+    background-size: contain;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
+}
 
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
@@ -167,6 +206,8 @@ section.section-apresentation {
         width: 100px;
         margin-bottom: 20px;
     }
+
+    
 
     section p {
         font-size: .9em;
@@ -188,9 +229,62 @@ section.section-apresentation {
         height: 70px;
         width: 70px;
     }
+
+    .horizontal-section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: space-around;
+        justify-items: space-around;
+    }
+
+    
+
+    
 }
 
 @media (min-width: 1080px) {
+
+    section {
+        height: 80vh;
+    }
+
+    .img-div {
+    
+        height: 80%;
+        width: 100vw;
+    }
+
+    .img-div > img {
+        height: 95%;
+        width: 75vw;
+    
+    
+    }
+
+    .section-apresentation h1 {
+        font-size: 4em;
+    }
+
+    .horizontal-section {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 0;
+        flex-shrink: 1;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .horizontal-section p {
+        
+        margin: 20px;
+    }
+
+    .horizontal-section img {
+        width: 80%;
+    }
+
     
 }
 

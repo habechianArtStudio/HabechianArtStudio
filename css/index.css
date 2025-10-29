@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+@font-face {
+    /* 1. Nome que você usará para chamar a fonte no CSS */
+    font-family: 'Grandstander'; 
+    
+    /* 2. Caminho para o arquivo da fonte */
+    src: url('../fonts/Grandstander/Grandstander-VariableFont_wght.ttf') format('ttf');
+         
+    
+    /* 3. (Opcional) Define a espessura da fonte (se for um arquivo específico) */
+    font-weight: normal; 
+    
+    /* 4. (Opcional) Define o estilo da fonte (normal ou italic) */
+    font-style: normal;
+}
 
 
 * {
@@ -38,7 +52,7 @@ header a {
 }
 
 header p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Grandstander','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
 }
 
@@ -403,6 +417,7 @@ menu#menu-section > ul {
 }
 
 section#intro {
+    font-family: 'Grandstander', 'Arial', 'Verdana';
     height: 70vh;
     display: flex;
     flex-flow: column-reverse nowrap;
@@ -473,7 +488,8 @@ section#intro input {
 
 
 .main-descricao {
-    
+    font-family: 'Grandstander', 'Arial', 'Verdana';
+    line-height: 2rem;
     flex-grow: 0;
     flex-shrink: 1;
     color: aliceblue;
@@ -501,6 +517,7 @@ section#intro input {
     width: 50%;
     align-self: center;
     background-color: #dfcda6cb;
+    font-family: 'Grandstander', 'Arial', 'Verdana';;
 }
 
 .main-descricao-2 a {
@@ -546,7 +563,7 @@ section#intro input {
 
 .main-descricao-2 p {
     color: #684c2e;
-    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    font-family: 'Grandstander ExtraBold', 'Grandstander', 'Arial', 'Verdana';
     font-size: 1.75em;
 }
 
@@ -632,7 +649,7 @@ a.main-image-link:hover {
 
 /* SECAO DE SEPARAR AS SECTIONS DE GAMES E SERIES*/
 .separar-section {
-    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    font-family: 'Grandstander ExtraBold', 'Grandstander', 'Arial', 'Verdana';
     color: aliceblue;
     display: flex;
     text-align: center;
@@ -821,6 +838,7 @@ section#final {
 }
 
 .final-div {
+    font-family: 'Grandstander', 'Arial', 'Verdana';
     align-items: center;
     align-content: flex-end;
     text-align: center;
