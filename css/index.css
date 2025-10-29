@@ -632,13 +632,13 @@ a.main-image-link:hover {
 
 /* SECAO DE SEPARAR AS SECTIONS DE GAMES E SERIES*/
 .separar-section {
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
     color: aliceblue;
     display: flex;
     text-align: center;
     text-justify: center;
     justify-content: center;
     align-content: center;
-    font-family: 'Arial Narrow Bold', sans-serif;
     border-bottom: solid 5px #4b3014;
     height: 50px;
     background-image: url(../media/backgroundimages/BG_madeira.png);

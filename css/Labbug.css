@@ -55,7 +55,7 @@ header {
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url(../media/backgroundimages/kingrush_padrao.png);
+    background-image: url(../media/backgroundimages/labbug_padrao.png);
     background-size: 40%;
     overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
     
