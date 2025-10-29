@@ -93,7 +93,7 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/KR/LOGO.png);
-    box-shadow: 7px 7px 0px rgb(53, 31, 2);
+    box-shadow: 7px 7px 0px rgb(129, 117, 2);
     border-radius: 25px;
     border: solid 3px aliceblue; transition: transform 1s;
 }
@@ -126,7 +126,7 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/LB/LOGO_2.png);
-    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    box-shadow: 7px 7px 0px rgb(3, 53, 100);
     border-radius: 25px;
     border: solid 3px aliceblue;
 
@@ -168,7 +168,7 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/EXPO2900/LOGO.png);
-    box-shadow: 7px 7px 0px rgb(13, 31, 19);
+    box-shadow: 7px 7px 0px rgb(4, 73, 27);
     border-radius: 25px;
     border: solid 3px aliceblue;
 
@@ -205,7 +205,7 @@ section {
     align-self: center;
     background-size: cover;
     background-image: url(../media/series/LB/LOGO.png);
-    box-shadow: 7px 7px 0px rgb(82, 64, 8);
+    box-shadow: 7px 7px 0px rgb(102, 15, 4);
     border-radius: 25px;
     border: solid 3px aliceblue;
 
@@ -241,6 +241,10 @@ section {
 
 
     transition: transform 1s;
+}
+
+.herancademisterios-img:hover {
+    transform: scale(1.1);
 }
 
 /* Adicionando transição explícita para o Parallax */
@@ -454,10 +458,7 @@ section#intro input {
     background-repeat: no-repeat;
 }
 
-.main-descricao-2 h2 {
-    margin: 15px;
-    font-size: 3em;
-}
+
 
 
 .main-descricao {
@@ -479,20 +480,32 @@ section#intro input {
     flex-grow: 0;
     flex-shrink: 1;
     color: aliceblue;
-    text-shadow: 1px 1px 4px black;
+    text-shadow: 1px 2px 0px black;
     font-size: smaller;
     /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
     border-radius: 10px 10px 10px 10px;
     height: 60%;
     width: 40%;
     align-self: center;
-    background-color: #eed08ec4;
+    background-color: #dfcda6a2;
 }
 
-.main-descricao h1 {
+.main-descricao-2 h2 {
+    color: #f0eed2;
     padding: 10px;
-    font-size: 2.5em;
+    background-color: #a0743b;
+    box-shadow: 2px 4px 0px #221303;
+    border-radius: 20px;
+    margin: 15px;
+    font-size: 3em;
 }
+
+.main-descricao-2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+
 
 .main-descricao p {
     font-size: 1.8em;
