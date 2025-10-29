@@ -50,13 +50,14 @@ body {
 section {
     display: flex;
     flex-flow: column nowrap;
-    height: 40vh;
+    height: 60vh;
     width: 100vw;
     
     
 }
 
 p {
+    margin: 10px;
     color: aliceblue;
     text-justify: center;
     text-align: center;
@@ -203,7 +204,7 @@ section.section-apresentation {
 }
 
 .img-div > img {
-    height: 90%;
+    height: 200px;
     width: 80vw;
     background-size: contain;
     margin-top: 10px;
