@@ -325,13 +325,13 @@ menu#menu-section > ul {
 
 
 .navigation-manual {
-
+    
     padding-top: 10px;
     align-self: flex-end;
     justify-self: center;
     position: inherit;
     width: 300px;
-    height: 100px;
+    height: 25px;
     display: flex;
     flex-flow: row nowrap;
     flex-shrink: 0;
@@ -867,7 +867,9 @@ section#final {
 
 /*RESOLUÇÃO CELULAR DEITADO*/
 @media (min-width: 700px) and (max-height: 420px) {
-    
+    .navigation-manual {
+        translate: 0px 12vh;
+    }
 
     .final-div {
         padding-top: 40vh;
