@@ -25,13 +25,13 @@
 
     <ul class="menu-list">
         <li>
-            Início
+            <a href="#intro">Início</a>
         </li>
         <li>
-            Portfólio
+            <a href="#portfolio">Portfólio</a>
         </li>
         <li>
-            Contato
+            <a href="#contato">Contato</a>
         </li>
     </ul>
 
@@ -60,6 +60,7 @@
                 
                     <div class="logo-button-div">
                         <div class="initial-button-img">
+                            
                         </div>
 
                         <div class="main-image-container">
@@ -94,6 +95,7 @@
                     
                 </div>
                 
+                
                 <div class="navigation-manual">
                     <label for="radio1" class="manual-btn"></label>
                     <label for="radio2" class="manual-btn"></label>
@@ -101,20 +103,21 @@
                     <label for="radio4" class="manual-btn"></label>
                 </div>
                 
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
                 
 
             </div>
             
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <img src="media/jogos/KR/concept/1.png" alt="Fundo 1">
-                    <img src="media/jogos/KR/concept/2.png" alt="Fundo 2">
-                    <img src="media/jogos/KR/concept/3.png" alt="Fundo 3">
-                    <img src="media/jogos/KR/concept/4.png" alt="Fundo 4">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class=" slide first"><img src="media/jogos/KR/concept/1.png" alt="Fundo 1"></div>
+                    <div class=" slide"><img src="media/jogos/KR/concept/2.png" alt="Fundo 2"></div>
+                    <div class=" slide"><img src="media/jogos/KR/concept/3.png" alt="Fundo 3"></div>
+                    <div class=" slide"><img src="media/jogos/KR/concept/4.png" alt="Fundo 4"></div>
                 </div>
 
                 
@@ -125,7 +128,7 @@
             </section>
         </section>
     
-        <section class="separar-section text-shadow-pop-top">
+        <section id="portfolio" class="separar-section text-shadow-pop-top">
             <h1> <span class="material-symbols-outlined">
                 arrow_forward_ios
                 </span> 
@@ -227,7 +230,7 @@
     
         </section>
 
-        <section class="separar-section text-shadow-pop-top">
+        <section id="contato" class="separar-section text-shadow-pop-top">
             <h1> 
                 <span class="material-symbols-outlined">
                 arrow_forward_ios
@@ -278,9 +281,7 @@
         © 2025 Habechian Art Studio. Todos os direitos reservados.
     </footer>
 
-    <script src="js/index.js" defer>
-
-    </script>
+    <script src="js/index.js" defer></script>
 </body>
 
 

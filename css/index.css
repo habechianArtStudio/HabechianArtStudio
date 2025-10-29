@@ -575,6 +575,11 @@ ul.menu-list > li {
     
 }
 
+.menu-list a {
+    color: #684c2e;
+    text-decoration: none;
+}
+
 ul.menu-list > li:hover {
     translate: 0px -5px;
     cursor: pointer;
@@ -845,6 +850,8 @@ section#final {
 }
 
 .carousel-track {
+    height: 100%;
+    width: 100vw;
     display: flex; 
     height: 70vh;
     /*translate: -101% 0;*/ 
@@ -860,16 +867,48 @@ section#final {
     
 }
 
+.slide {
+    width: 100%;
+    position: relative;
+    /*margin-right: -50%;*/
+}
+
+.slide img {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+
+
+
 .carousel-track img {
     /* Cada imagem ocupa 100% da largura do contêiner visível */
     width: 100vw; 
-    height: 100%;
+    height: 70vh;
     object-fit: cover;
     flex-shrink: 0; /* Impede que a imagem encolha */
     
     
     
 }   
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -100vw;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -200vw;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -300vw;
+}
 
 /* QUANDO FICAR PEQUENO */
 
@@ -929,6 +968,14 @@ section#final {
     header p {
     font-size: 3em;
 }
+
+    .manual-btn {
+    border-radius: 5px;
+    border: solid 3px aliceblue;
+    width: 50px;
+
+    transition: all 1s;
+    }
 
     .name-photo-div {
         padding: 25px;
