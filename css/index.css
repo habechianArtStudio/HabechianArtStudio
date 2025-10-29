@@ -72,6 +72,7 @@ p {
 section {
     height: 60vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 
@@ -802,7 +803,7 @@ a.button-portfolio:hover {
     width: 50px;
     height: 50px;
     background-size: 100%;
-    background-image: url(../media/favicon/android-chrome-512x512.png);
+    background-image: url(../media/favicon/android-chrome-192x192.png);
     background-repeat: no-repeat;
 }
 
