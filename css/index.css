@@ -325,11 +325,10 @@ menu#menu-section > ul {
 
 
 .navigation-manual {
-    
-    padding-top: 10px;
-    align-self: flex-end;
+    translate: 0px 5vh;
+    align-self: center;
     justify-self: center;
-    position: inherit;
+    position: center;
     width: 300px;
     height: 25px;
     display: flex;
