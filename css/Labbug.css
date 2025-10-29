@@ -135,8 +135,9 @@ section.section-apresentation {
     align-items: center;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/backgroundimages/BG_escuro.png);
-    background-size: cover
+    background-image: url(../media/jogos/LB/concept/1.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .section-apresentation h1 {
