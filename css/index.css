@@ -650,7 +650,7 @@ a.main-image-link:hover {
 
 /* SECAO DE SEPARAR AS SECTIONS DE GAMES E SERIES*/
 .separar-section {
-    font-family: 'Grandstander ExtraBold', 'Grandstander', 'Arial', 'Verdana';
+    font-family: 'Grandstander','Grandstander ExtraBold', 'Arial', 'Verdana';
     color: aliceblue;
     display: flex;
     text-align: center;
