@@ -10,6 +10,7 @@
 
 :root {
     --cor-fundo: rgb(24, 11, 1);
+    --cor-fundo-descricao: #eed08ec4;
 }
 
 header {
@@ -76,9 +77,13 @@ section {
 .kingrush-descricao-div {
     background-color: #c5dee777;
     border-radius: 15px;
-    border: solid 2px rgb(223, 227, 228);
     align-self: center;
     height: 40%;
+}
+
+.kingrush-descricao-div h2 {
+    margin: 10px;
+    font-size: 3em;
 }
 
 .kingrush-img {
@@ -110,7 +115,6 @@ section {
 .labbug-descricao-div {
     background-color: #c5dee777;
     border-radius: 15px;
-    border: solid 2px rgb(223, 227, 228);
     height: 30%;
     align-self: center;
 }
@@ -145,23 +149,22 @@ section {
 }
 
 .expo2900-div div {
-    height: 200px;
-    width: 500px;
     align-self: center;
     color: aliceblue;
     
 }
 
 .expo2900-descricao-div {
-    background-color: #c5dee777;
+    background-color: var(--cor-fundo-descricao);
     border-radius: 15px;
-    border: solid 2px rgb(223, 227, 228);
+    height: 40%;
+    width: 40%;
 }
 
 .expo2900-img {
     width: 150px;
     height: 150px;
-    background-color: #3a2c1d;
+    background-color: #16130f;
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/EXPO2900/LOGO.png);
@@ -175,17 +178,24 @@ section {
 
 .expo2900-img:hover {
     transform: scale(1.1);
+    
 }
 
 
 .lixaodobairro-div {
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     background-image: url(../media/series/LB/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.lixaodobairro-descricao-div {
+    border-radius: 15px;
+    height: 30%;
+    align-self: center;
 }
 
 .lixaodobairro-img {
@@ -198,13 +208,19 @@ section {
     box-shadow: 7px 7px 0px rgb(82, 64, 8);
     border-radius: 25px;
     border: solid 3px aliceblue;
+
+    transition: transform 1s;
+}
+
+.lixaodobairro-img:hover {
+    transform: scale(1.1);
 }
 
 .herancademisterios-div {
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-around;
     background-image: url(../media/series/HM/concept/1.png);
     background-size: cover;
     background-position: center;
@@ -427,6 +443,23 @@ section#intro input {
     background-repeat: no-repeat;
 }
 
+.main-separacao-2 {
+    
+    align-self: center;
+    height: 20px;
+    background-image: url(../media/backgroundimages/BG_madeira.png);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.63);
+    background-size: 200%;
+    border-radius: 10px 10px 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.main-descricao-2 h2 {
+    margin: 15px;
+    font-size: 3em;
+}
+
+
 .main-descricao {
     
     flex-grow: 0;
@@ -437,6 +470,21 @@ section#intro input {
     /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
     border-radius: 0px 0px 10px 10px;
     height: 200px;
+    align-self: center;
+    background-color: #eed08ec4;
+}
+
+.main-descricao-2 {
+    
+    flex-grow: 0;
+    flex-shrink: 1;
+    color: aliceblue;
+    text-shadow: 1px 1px 4px black;
+    font-size: smaller;
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.705); */
+    border-radius: 10px 10px 10px 10px;
+    height: 60%;
+    width: 40%;
     align-self: center;
     background-color: #eed08ec4;
 }
@@ -798,7 +846,13 @@ section#final {
 
     }
 
-    
+    .herancademisterios-descricao-div {
+        display: none;
+    }
+
+    .lixaodobairro-descricao-div {
+        display: none;
+    }
 
     .labbug-descricao-div {
         display: none;
@@ -857,6 +911,26 @@ section#final {
     }
 
     .expo2900-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .herancademisterios-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .lixaodobairro-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .labbug-img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .kingrush-img {
         width: 200px;
         height: 200px;
     }
