@@ -490,7 +490,7 @@ section#intro input {
     height: 60%;
     width: 40%;
     align-self: center;
-    background-color: #dfcda6a2;
+    background-color: #dfcda6cb;
 }
 
 .main-descricao-2 a {
@@ -508,7 +508,7 @@ section#intro input {
     border: solid 4px rgb(151, 119, 89);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 2px 6px 0px #221303a4;
+    box-shadow: 4px 8px 0px #221303a4;
 
     transition: all 0.5s;
 }
@@ -535,8 +535,9 @@ section#intro input {
 }
 
 .main-descricao-2 p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    color: #684c2e;
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    font-size: 1.75em;
 }
 
 
