@@ -329,7 +329,7 @@ menu#menu-section > ul {
 }
 
 .navigation-manual {
-    translate: 0px 60%;
+    
     padding-top: 10px;
     align-self: flex-end;
     justify-self: center;
@@ -868,9 +868,7 @@ section#final {
 
 /*RESOLUÇÃO CELULAR DEITADO*/
 @media (min-width: 700px) and (max-height: 420px) {
-    .navigation-manual {
-        translate: 0px 15%;
-    }
+    
 
     .final-div {
         padding-top: 40vh;
