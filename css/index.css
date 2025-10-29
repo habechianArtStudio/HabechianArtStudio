@@ -558,7 +558,7 @@ ul.menu-list > li:hover {
 
 
 a.main-image-link {
-    padding: 25px;
+    margin: 25px;
     align-self: center;
     display: flex;
     flex-grow: 0;
