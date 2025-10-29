@@ -2,9 +2,10 @@
 
 :root {
     --cor-botao: rgb(138, 95, 67);
+    --cor-botao-hov: rgb(180, 128, 93);
     --cor-botao-sombra: rgb(78, 54, 21);
     --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(202, 169, 135, 0.726);
+    --cor-text: rgba(202, 168, 135, 0.473);
 }
 
 * {
@@ -61,13 +62,13 @@ p {
     padding: 10px;
     align-self: center;
     justify-self: center;
-    display: flex;
     height: 40%;
     width: 40vw;
     font-family: 'Grandstander Bold', 'Arial', 'Verdana';
     font-size: 1.2em;
     background-color: var(--cor-text);
     border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
 }
 
 .horizontal-section {
@@ -120,12 +121,17 @@ p {
 }
 
 .botao-retorne:hover {
+    background-color: var(--cor-botao-hov);
+}
+
+.botao-retorne:hover {
     transform: scale(1.1);
     border: solid 3px aliceblue;
     color: aliceblue;
     box-shadow: 4px 10px 0px var(--cor-botao-sombra);
 }
 section.section-apresentation {
+    
     height: 50vh;
     width: 100vw;
     display: flex;
@@ -141,6 +147,10 @@ section.section-apresentation {
 .section-apresentation h1 {
     margin: 10px;
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+}
+
+.section-apresentation p {
+    color: rgb(71, 45, 6);
 }
 
 .logo-img-intro img {
@@ -167,7 +177,7 @@ section.section-apresentation {
     width: 100vw;
     background-size: cover;
     background-image: url(../media/backgroundimages/BG_madeira.png);
-    box-shadow: 0px 5px 2px black;
+    box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }
 
 .text-block-intro {
@@ -186,7 +196,7 @@ section.section-apresentation {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    height: 60%;
+    height: 70%;
     width: 100vw;
 }
 
@@ -239,6 +249,15 @@ section.section-apresentation {
         justify-items: space-around;
     }
 
+    .horizontal-section div {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .horizontal-section p {
+        height: 75%;
+    }
+
     
 
     
@@ -250,15 +269,21 @@ section.section-apresentation {
         height: 80vh;
     }
 
+    p {
+        width: 60%;
+    }
+
     .img-div {
     
-        height: 80%;
+        height: 90%;
         width: 100vw;
     }
 
     .img-div > img {
+        background-size: cover;
+        
         height: 95%;
-        width: 75vw;
+        width: 90vw;
     
     
     }
@@ -282,7 +307,13 @@ section.section-apresentation {
     }
 
     .horizontal-section img {
-        width: 80%;
+        height: 90%;
+        width: 95%;
+    }
+
+    .vertical-section img {
+        width: 70%;
+    
     }
 
     
