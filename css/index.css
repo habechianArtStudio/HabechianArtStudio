@@ -329,14 +329,14 @@ menu#menu-section > ul {
 }
 
 .navigation-manual {
+    
     display: flex;
     translate: 0px 1.5vh;
     align-self: center;
     justify-self: center;
-    position: absolute;
+    position: relative;
     width: 80px;
     height: 25px;
-    display: flex;
     flex-flow: row nowrap;
     flex-shrink: 0;
     justify-content: center;
@@ -877,7 +877,7 @@ section#final {
 /*RESOLUÇÃO CELULAR DEITADO*/
 @media (min-width: 700px) and (max-height: 420px) {
     .navigation-manual {
-        translate: 0px -5vh;
+        translate: 0px -10vh;
     }
 
     .final-div {
