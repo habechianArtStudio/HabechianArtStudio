@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+:root {
+    --cor-botao: rgb(138, 95, 67);
+    --cor-botao-sombra: rgb(78, 54, 21);
+    --cor-text-botao: rgb(214, 180, 145);
+}
+
+* {
+    
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-image: url(../media/backgroundimages/BG_claro.png);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url(../media/favicon/android-chrome-512x512.png);
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+
+    transition: all .5s;
+}
+
+.logo-div:hover {
+    transform: scale(1.1);
+}
+
+.logo-div a {
+    height: 100px;
+    width: 100px;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../media/backgroundimages/kingrush_padrao.png);
+    background-size: 40%;
+    overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
+    
+    
+}
+
+section {
+    height: 40vh;
+    width: 100vw;
+    
+    
+}
+
+p {
+    text-justify: center;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    width: 60vw;
+    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
+    font-size: 1.2em;
+}
+
+.botao-retorne {
+    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
+    text-align: center;
+    justify-items: center;
+    width: 20vw;
+    height: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 6px 0px var(--cor-botao-sombra);
+    border: solid 3px var(--cor-text-botao);
+    text-decoration: none;
+    color: var(--cor-text-botao);
+    background-color: var(--cor-botao);
+
+    transition: all 0.5s;
+}
+
+.botao-retorne:hover {
+    transform: scale(1.1);
+    border: solid 3px aliceblue;
+    color: aliceblue;
+    box-shadow: 4px 10px 0px var(--cor-botao-sombra);
+}
+section.section-apresentation {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-image: url(../media/backgroundimages/BG_escuro.png);
+    background-size: cover
+}
+
+.section-apresentation h1 {
+    
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+}
+
+.logo-img-intro img {
+    height: 300px;
+    width: 300px;
+    
+}
+
+.section-separacao {
+    height: 5vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url(../media/backgroundimages/BG_madeira.png);
+    box-shadow: 0px 5px 2px black;
+}
+
+.text-block-intro {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 1080px) {
+    .logo-img-intro img {
+        height: 150px;
+        width: 150px;
+    }
+
+    section.section-apresentation {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (min-width: 1080px) {
+    
+}
