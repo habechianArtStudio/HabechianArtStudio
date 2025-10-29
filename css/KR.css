@@ -142,15 +142,24 @@ section.section-apresentation {
 }
 
 
-
+/*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
     .logo-img-intro img {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 
     section.section-apresentation {
-        flex-flow: column nowrap;
+        flex-flow: column-reverse nowrap;
+    }
+
+    section.section-apresentation p {
+        font-size: 0.8em;
+    }
+
+    .logo-div {
+        height: 70px;
+        width: 70px;
     }
 }
 
