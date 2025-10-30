@@ -51,6 +51,7 @@ const PastaHerancadeMisterios = temasConfig.herancademisterioscaminho.folder;
 const PastaKingRush = temasConfig.Caminhoimagem.folder;
 
 const mainLink = document.getElementById("parallax-img");
+const linkRef = document.getElementById("top-link");
 
 // Pega o caminho da nova pasta de referência do objeto temasConfig para as imagens (todas - indice do array fundos)
     
@@ -183,18 +184,23 @@ function mudandoLogoDireita(index) {
         case index = 0:
             // Código a ser executado se expressao === valor1
             mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+            linkRef.href = "html/PagLabBug.html";
             break; // O 'break' é crucial!
         case index = 1:
             mainLink.style.backgroundImage = `url('media/jogos/EXPO2900/LOGO.png')`;
+            linkRef.href = "html/PagExpo2900.html";
             break;
         case index = 2:
             mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            linkRef.href = "html/PagLixBairro.html";
             break;
         case index = 3:
             mainLink.style.backgroundImage = `url('media/series/HM/LOGO.png')`;
+            linkRef.href = "html/PagHerMist.html";
             break
         case index = 4:
             mainLink.style.backgroundImage = `url('media/jogos/KR/LOGO.png')`;
+            linkRef.href = "html/PagKR.html";
             break
         default:
         mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
@@ -206,19 +212,24 @@ function mudandoLogoEsquerda(index) {
     switch (index) {
         case index = 0:
             mainLink.style.backgroundImage = `url('media/jogos/KR/LOGO.png')`;
+            linkRef.href = "html/PagKR.html";
             break
         case index = 1:
             mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+            linkRef.href = "html/PagLabBug.html";
             break;
         case index = 2:
             mainLink.style.backgroundImage = `url('media/jogos/EXPO2900/LOGO.png')`;
+            linkRef.href = "html/PagExpo2900.html";
             break;
         case index = 3:
             // Código a ser executado se expressao === valor1
             mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            linkRef.href = "html/PagLixBairro.html";
             break; // O 'break' é crucial!
         case index = 4:
             mainLink.style.backgroundImage = `url('media/series/HM/LOGO.png')`;
+            linkRef.href = "html/PagHerMist.html";
             break
         default:
         mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
