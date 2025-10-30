@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+:root {
+    --cor-botao: rgb(138, 95, 67);
+    --cor-botao-hov: rgb(180, 128, 93);
+    --cor-botao-sombra: rgb(78, 54, 21);
+    --cor-text-botao: rgb(214, 180, 145);
+    --cor-text: rgba(202, 165, 135, 0.411);
+}
+
+* {
+    
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    z-index: 5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-size: cover;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../media/backgroundimages/BG_medio.png);
+    background-size: 40%;
+    overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
+    
+    
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    
+    height: 60vh;
+    width: 95vw;
+    
+    
+}
+
+p {
+    margin: 10px;
+    color: aliceblue;
+    text-justify: center;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    height: 20%;
+    width: 60vw;
+    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
+    font-size: 1.2em;
+    background-color: var(--cor-text);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
+}
+
+
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    background-image: url(../media/favicon/android-chrome-512x512.png);
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+
+    transition: all .5s;
+}
+
+.logo-div:hover {
+    transform: scale(1.1);
+}
+
+.logo-div a {
+    height: 100px;
+    width: 100px;
+}
+
+.botao-retorne {
+    font-family: 'Grandstander Bold', 'Arial', 'Verdana';
+    text-align: center;
+    justify-items: center;
+    width: 20vw;
+    height: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 6px 0px var(--cor-botao-sombra);
+    border: solid 3px var(--cor-text-botao);
+    text-decoration: none;
+    color: var(--cor-text-botao);
+    background-color: var(--cor-botao);
+
+    transition: all 0.5s;
+}
+
+.botao-retorne:hover {
+    background-color: var(--cor-botao-hov);
+}
+
+.botao-retorne:hover {
+    transform: scale(1.1);
+    border: solid 3px aliceblue;
+    color: aliceblue;
+    box-shadow: 4px 10px 0px var(--cor-botao-sombra);
+}
+section.section-apresentation {
+    
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    background-image: url(../media/series/HM/concept/4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-apresentation h1 {
+    margin: 10px;
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+}
+
+.section-apresentation p {
+    color: rgb(71, 45, 6);
+}
+
+.logo-img-intro img {
+    height: 300px;
+    width: 400px;
+    
+}
+
+
+
+.section-separacao {
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    color: aliceblue;
+    text-shadow: 1px 2px 0px rgb(51, 20, 2);
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    text-justify: center;
+    height: 5vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-position: bottom;
+    box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
+}
+
+.text-block-intro {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.img-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 70%;
+    width: 100vw;
+}
+
+.img-div > img {
+    height: 200px;
+    width: 80vw;
+    background-size: contain;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
+}
+
+/*QUANDO FICAR PEQUENA*/
+@media (max-width: 1080px) {
+    .logo-img-intro img {
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    
+
+    section p {
+        font-size: .9em;
+        margin: 10px;
+    }
+
+    section.section-apresentation {
+        flex-flow: column-reverse nowrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+        
+    }
+
+    section.section-apresentation p {
+        font-size: 0.8em;
+    }
+
+    .logo-div {
+        height: 70px;
+        width: 70px;
+    }
+
+    .horizontal-section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: space-around;
+        justify-items: space-around;
+    }
+
+    .horizontal-section div {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .horizontal-section p {
+        height: 75%;
+    }
+
+    
+
+    
+}
+
+@media (min-width: 1080px) {
+
+    section {
+        height: 80vh;
+    }
+
+    p {
+        width: 60%;
+    }
+
+    .img-div {
+    
+        height: 90%;
+        width: 100vw;
+    }
+
+    .img-div > img {
+        background-size: cover;
+        
+        height: 95%;
+        width: 90vw;
+    
+    
+    }
+
+    .section-apresentation h1 {
+        font-size: 4em;
+    }
+
+    .horizontal-section {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 0;
+        flex-shrink: 1;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .horizontal-section p {
+        
+        margin: 20px;
+    }
+
+    .horizontal-section img {
+        height: 90%;
+        width: 95%;
+    }
+
+    .vertical-section img {
+        width: 70%;
+    
+    }
+
+    
+}
+
