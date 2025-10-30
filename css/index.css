@@ -248,8 +248,9 @@ section {
     align-content: space-around;
     justify-content: space-around;
     background-image: url(../media/series/HM/concept/1.png);
+    background-position: bottom;
     background-size: cover;
-    background-position: center;
+
 }
 
 .herancademisterios-img {
