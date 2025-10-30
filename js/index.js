@@ -212,8 +212,8 @@ function mudandoLogoDireita(index) {
 function mudandoLogoEsquerda(index) {
     switch (index) {
         case index = 0:
-            mainLink.style.backgroundImage = `url('media/jogos/KR/LOGO.png')`;
-            linkRef.href = "html/PagKR.html";
+            mainLink.style.backgroundImage = `url('media/series/HM/LOGO.png')`;
+            linkRef.href = "html/PagHerMist.html";
             break
         case index = 1:
             mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
@@ -234,7 +234,7 @@ function mudandoLogoEsquerda(index) {
             linkRef.href = "html/PagHerMist.html";
             break
         default:
-        mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+        
 }
     
 }
