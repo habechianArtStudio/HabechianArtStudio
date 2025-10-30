@@ -635,11 +635,11 @@ ul.menu-list > li:hover {
 }
 
 .main-image-logo {
-      
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../media/jogos/KR/LOGO.png);
     border: solid 3px aliceblue;
+    border-radius: 10px;
     box-shadow: 5px 5px 0px rgb(78, 48, 2);
     
     
