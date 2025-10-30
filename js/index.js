@@ -192,6 +192,7 @@ function mudandoLogoDireita(index) {
             break;
         case index = 2:
             mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            
             linkRef.href = "html/PagLixBairro.html";
             break;
         case index = 3:
@@ -225,6 +226,7 @@ function mudandoLogoEsquerda(index) {
         case index = 3:
             // Código a ser executado se expressao === valor1
             mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            
             linkRef.href = "html/PagLixBairro.html";
             break; // O 'break' é crucial!
         case index = 4:

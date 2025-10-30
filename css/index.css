@@ -286,7 +286,7 @@ section {
     min-width: 100px;
     width: 100%;
     margin:auto;
-    background-color: #d3b471;
+    background-color: #331f06;
     border-radius: 10px;
     
     
@@ -294,7 +294,13 @@ section {
     background-repeat: no-repeat !important; 
     background-position: center bottom !important; /* Centraliza melhor a imagem */
 
+    transition: all .3s;
 
+
+}
+
+#parallax-img:hover {
+    background-color: #a0743b;
 }
 
 
@@ -320,7 +326,7 @@ section {
     background-color: #4b3014;
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 5px 3px 0px #221303;
+    box-shadow: 5px 3px 0px #3a1f02;
     align-self: center;
 
     transition: transform 0.3s;
@@ -329,6 +335,7 @@ section {
 .initial-button-img:hover {
     transform: scale(1.1);
     border: solid 2px aliceblue;
+    background-color: #a77949;
     cursor: pointer;
 }
 
@@ -339,7 +346,7 @@ section {
     background-size: cover;
     background-color: #4b3014;
     border-radius: 50%;
-    box-shadow: 5px 3px 0px #221303;
+    box-shadow: 5px 3px 0px #3a1f02;
     align-self: center;
 
     transition: transform 0.3s;
@@ -348,6 +355,7 @@ section {
 .final-button-img:hover {
     transform: scale(1.1);
     border: solid 2px aliceblue;
+    background-color: #a77949;
     cursor: pointer;
 }
 
@@ -640,6 +648,7 @@ ul.menu-list > li:hover {
     background-image: url(../media/jogos/KR/LOGO.png);
     border: solid 3px aliceblue;
     border-radius: 10px;
+    background-color: #16130f;
     box-shadow: 5px 5px 0px rgb(78, 48, 2);
     
     
@@ -1005,6 +1014,13 @@ section#final {
         justify-content: flex-end;
     }
 
+    .initial-button-img {
+        display: none;
+    }
+
+    .final-button-img {
+        display: none;
+    }
     
 
    
