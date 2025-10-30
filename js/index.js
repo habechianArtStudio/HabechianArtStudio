@@ -50,7 +50,7 @@ const PastaLixaodoBairro = temasConfig.lixaodobairrocaminho.folder;
 const PastaHerancadeMisterios = temasConfig.herancademisterioscaminho.folder;
 const PastaKingRush = temasConfig.Caminhoimagem.folder;
 
-const mainLink = document.getElementById("top-link");
+const mainLink = document.getElementById("parallax-img");
 
 // Pega o caminho da nova pasta de referência do objeto temasConfig para as imagens (todas - indice do array fundos)
     
@@ -116,17 +116,19 @@ function mudarFundoDireita() {
         
         
     });
+    mudandoLogoDireita(indeximages)
     indeximages = indeximages + 1;
 }
 
 function mudarFundoEsquerda() {
-
+    
     fundos.forEach((elemento, index) => {
         
         // Verifica se o elemento existe (para evitar erros se o ID não for encontrado)
         if (elemento) {
             
             if (indeximages == 4){
+                
                 const novoCaminho = PastaLixaodoBairro+'/'+(index+1)+'.png';
                 elemento.src = novoCaminho;
                 
@@ -135,7 +137,7 @@ function mudarFundoEsquerda() {
                 console.log(`Elemento ${index + 1} atualizado para: ${novoCaminho}`);
                 
             } else if (indeximages == 3) {
-                const novoCaminho = PastaLixaodoBairro+'/'+(index+1)+'.png';
+                const novoCaminho = PastaExpo2900+'/'+(index+1)+'.png';
                 elemento.src = novoCaminho;
                 
                 
@@ -159,21 +161,67 @@ function mudarFundoEsquerda() {
                 console.log(`Elemento ${index + 1} atualizado para: ${novoCaminho}`);
 
             } else if (indeximages == 0) {
-                const novoCaminho = PastaKingRush+'/'+(index+1)+'.png';
+                const novoCaminho = PastaHerancadeMisterios+'/'+(index+1)+'.png';
                 elemento.src = novoCaminho;
-                
                 
                 
                 console.log(`${indeximages}`);
                 console.log(`Elemento ${index + 1} atualizado para: ${novoCaminho}`);
-            } else indeximages = 4;
-            
+                if (index == fundos.length - 1) indeximages = 5;
+            }
+
         }
     });
+    
     indeximages = indeximages - 1;
+    mudandoLogoEsquerda(indeximages)
 }
 
 
-function mudandoLogo() {
+function mudandoLogoDireita(index) {
+    switch (index) {
+        case index = 0:
+            // Código a ser executado se expressao === valor1
+            mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+            break; // O 'break' é crucial!
+        case index = 1:
+            mainLink.style.backgroundImage = `url('media/jogos/EXPO2900/LOGO.png')`;
+            break;
+        case index = 2:
+            mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            break;
+        case index = 3:
+            mainLink.style.backgroundImage = `url('media/series/HM/LOGO.png')`;
+            break
+        case index = 4:
+            mainLink.style.backgroundImage = `url('media/jogos/KR/LOGO.png')`;
+            break
+        default:
+        mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+}
+    
+}
+
+function mudandoLogoEsquerda(index) {
+    switch (index) {
+        case index = 0:
+            mainLink.style.backgroundImage = `url('media/jogos/KR/LOGO.png')`;
+            break
+        case index = 1:
+            mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+            break;
+        case index = 2:
+            mainLink.style.backgroundImage = `url('media/jogos/EXPO2900/LOGO.png')`;
+            break;
+        case index = 3:
+            // Código a ser executado se expressao === valor1
+            mainLink.style.backgroundImage = `url('media/series/LB/LOGO.png')`;
+            break; // O 'break' é crucial!
+        case index = 4:
+            mainLink.style.backgroundImage = `url('media/series/HM/LOGO.png')`;
+            break
+        default:
+        mainLink.style.backgroundImage = `url('media/jogos/LB/LOGO.png')`;
+}
     
 }
