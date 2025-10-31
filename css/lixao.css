@@ -318,3 +318,20 @@ section.section-apresentation {
     
 }
 
+@media (min-width: 1921px) {
+    .img-div {
+    
+    height: 90%;
+    width: 100vw;
+    }
+
+    .img-div > img {
+    height: 90%;
+    width: 60%;
+    
+    }
+
+    .vertical-section img {
+        width: 50%;
+    }
+}
