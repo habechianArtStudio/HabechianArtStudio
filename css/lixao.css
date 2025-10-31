@@ -208,6 +208,27 @@ section.section-apresentation {
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
 
+div.img-quadrada {
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 40%;
+}
+
+.img-quadrada img {
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 50%;
+
+}
+
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
     .logo-img-intro img {
@@ -250,7 +271,12 @@ section.section-apresentation {
 
     .horizontal-section div {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        align-content: center;
+        width: 100vw;
     }
 
     .horizontal-section p {
