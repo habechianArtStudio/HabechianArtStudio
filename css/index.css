@@ -287,7 +287,7 @@ section {
     min-width: 100px;
     width: 100%;
     margin:auto;
-    background-color: #41280b;
+    background-color: #44301e;
     border-radius: 10px;
     
     
@@ -301,7 +301,7 @@ section {
 }
 
 #parallax-img:hover {
-    background-color: #a0743b;
+    background-color: #ac835d;
 }
 
 
@@ -649,8 +649,8 @@ ul.menu-list > li:hover {
     background-image: url(../media/jogos/KR/LOGO.png);
     border: solid 3px aliceblue;
     border-radius: 10px;
-    background-color: #16130f;
-    box-shadow: 5px 5px 0px rgb(78, 48, 2);
+    background-color: #251911;
+    box-shadow: 5px 5px 0px rgb(116, 57, 2);
     
     
 }
