@@ -143,10 +143,12 @@ section.section-apresentation {
 .section-apresentation h1 {
     margin: 10px;
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    color: aliceblue;
+    text-shadow: 1px 2px 4px var(--cor-botao-sombra);
 }
 
 .section-apresentation p {
-    color: rgb(71, 45, 6);
+    color: rgb(247, 247, 247);
 }
 
 .logo-img-intro img {
