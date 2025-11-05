@@ -829,6 +829,16 @@ a.button-portfolio:hover {
     background-repeat: no-repeat;
 }
 
+.bihance-img {
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    
+    background-image: url(../media/linklogos/Bihance_Logo.png);
+    background-repeat: no-repeat;
+}
+
 .logo-img {    
     position: fixed;
     top: 0;
