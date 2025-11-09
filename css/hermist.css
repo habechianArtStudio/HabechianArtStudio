@@ -279,9 +279,11 @@ section.section-apresentation {
 
     section {
         height: 80vh;
+        padding: 10px 0px;
     }
 
     p {
+        
         width: 60%;
     }
 
@@ -325,9 +327,12 @@ section.section-apresentation {
     }
 
     .vertical-section img {
-        width: 70%;
+        height: 98%;
+        width: 60%;
     
     }
+
+    
 
     .section-apresentation h1 {
     margin: 10px;
