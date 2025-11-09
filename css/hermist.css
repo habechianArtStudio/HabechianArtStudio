@@ -200,14 +200,14 @@ section.section-apresentation {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    height: 70%;
+    height: 80%;
     width: 100vw;
 }
 
 .img-div > img {
     height: 200px;
-    width: 80vw;
-    background-size: contain;
+    width: 90vw;
+    background-size: auto;
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
@@ -287,15 +287,16 @@ section.section-apresentation {
 
     .img-div {
     
-        height: 90%;
+        height: 75vh;
         width: 100vw;
     }
 
     .img-div > img {
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         
         height: 95%;
-        width: 90vw;
+        width: 100%;
     
     
     }
@@ -319,7 +320,7 @@ section.section-apresentation {
     }
 
     .horizontal-section img {
-        height: 90%;
+        height: 95%;
         width: 95%;
     }
 
@@ -344,12 +345,12 @@ section.section-apresentation {
 @media (min-width: 1921px) {
     .img-div {
     
-    height: 90%;
+    height: 100%;
     width: 100vw;
     }
 
     .img-div > img {
-    height: 90%;
+    height: 100%;
     width: 60%;
     
     }
