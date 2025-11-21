@@ -97,7 +97,7 @@ section {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 70vh;
     width: 95vw;
     
     
@@ -106,7 +106,7 @@ section {
 .h1-section {
     padding: 10px 10px 25px 10px;
     font-family: 'Grandstander', 'Arial', 'Verdana';
-    font-size: medium;
+    font-size: small;
     text-align: center;
 }
 
