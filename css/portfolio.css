@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@font-face {
+    /* 1. Nome que você usará para chamar a fonte no CSS */
+    font-family: 'Grandstander'; 
+    
+    /* 2. Caminho para o arquivo da fonte */
+    src: url('../fonts/Grandstander/Grandstander-VariableFont_wght.ttf') format('ttf');
+         
+    
+    /* 3. (Opcional) Define a espessura da fonte (se for um arquivo específico) */
+    font-weight: normal; 
+    
+    /* 4. (Opcional) Define o estilo da fonte (normal ou italic) */
+    font-style: normal;
+}
+
 :root {
     --cor-botao: rgb(138, 95, 67);
     --cor-botao-hov: rgb(180, 128, 93);
