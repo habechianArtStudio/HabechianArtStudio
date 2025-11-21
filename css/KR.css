@@ -157,7 +157,15 @@ section.section-apresentation {
     
 }
 
-
+.videos {
+    background-repeat: no-repeat;
+    background-size: auto;
+    align-self: center;
+    justify-self: center;
+    height: 100px;
+    width: 180px;
+    border: solid 5px rgb(58, 28, 3);
+}
 
 .section-separacao {
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
