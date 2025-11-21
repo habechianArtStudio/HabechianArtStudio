@@ -770,6 +770,7 @@ a.button-portfolio:hover {
 .social-icon-div {
     width: 25vw;
     margin: 50px;
+    padding-bottom: 10px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
