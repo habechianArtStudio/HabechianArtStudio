@@ -254,7 +254,7 @@ section.section-apresentation {
     color: rgb(65, 36, 3);
 }
 
-#skill-container .skillpercent {
+.skillpercent {
     font-weight: bold;
     color: rgb(92, 51, 5);
 }
