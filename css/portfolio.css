@@ -195,7 +195,7 @@ section.section-apresentation {
 
 .section-apresentation h1 {
     margin: 10px;
-    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
     color: rgb(252, 242, 232);
     background-color: rgb(161, 118, 69);
     padding: 10px;
@@ -206,7 +206,7 @@ section.section-apresentation {
 }
 
 .section-apresentation p {
-    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
     
     
     color: rgb(107, 47, 7);
