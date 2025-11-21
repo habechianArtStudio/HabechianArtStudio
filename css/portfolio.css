@@ -207,9 +207,9 @@ section.section-apresentation {
 
 .section-apresentation p {
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
-    text-shadow: 1px 2px 1px rgba(26, 13, 1, 0.774);
     
-    color: rgb(255, 239, 228);
+    
+    color: rgb(107, 47, 7);
 }
 
 
@@ -340,3 +340,11 @@ section.section-apresentation {
     border-radius: 20px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
+
+.footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a2c1d;
+            color: #f1e6d6;
+            font-size: 0.9rem;
+        }
