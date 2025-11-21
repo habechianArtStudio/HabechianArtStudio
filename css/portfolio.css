@@ -40,29 +40,29 @@ header > h1 {
 }
 
 header > a {
-    width: 80px;
-    padding: 6px;
-    border-radius: 5px;
-    background-color: var(--cor-botao);
-    text-decoration: none;
+    font-family: 'Grandstander', 'Arial', 'Verdana';
+    font-weight: 100;
     text-align: center;
-    color: var(--cor-text);
-    border: solid 3px var(--cor-botao-sombra);
-    box-shadow: 2px 2px 0px var(--cor-botao-sombra);
+    justify-items: center;
+    width: 20vw;
+    height: 12px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 6px 0px var(--cor-botao-sombra);
+    border: solid 3px var(--cor-text-botao);
+    text-decoration: none;
+    color: var(--cor-text-botao);
+    background-color: var(--cor-botao);
 
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 header > a:hover {
-    padding: 6px;
-    border-radius: 5px;
-    background-color: var(--cor-botao);
-    text-decoration: none;
-    color: var(--cor-text-botao);
-    border: solid 3px var(--cor-botao-sombra);
-    box-shadow: 2px 2px 0px var(--cor-botao-sombra);
-
+    background-color: var(--cor-botao-hov);
     transform: scale(1.1);
+    border: solid 3px aliceblue;
+    color: aliceblue;
+    box-shadow: 4px 10px 0px var(--cor-botao-sombra);
 }
 
 
@@ -86,6 +86,13 @@ section {
     width: 95vw;
     
     
+}
+
+.h1-section {
+    padding: 10px 10px 25px 10px;
+    font-family: 'Grandstander', 'Arial', 'Verdana';
+    font-size: medium;
+    text-align: center;
 }
 
 p {
@@ -179,21 +186,23 @@ section.section-apresentation {
     padding: 10px;
     border-radius: 10px;
     text-shadow: 2px 2px 2px var(--cor-botao-sombra);
+    box-shadow: 4px 3px 0px rgba(129, 53, 3, 0.767);
     
 }
 
 .section-apresentation p {
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.637);
-    color: rgb(71, 45, 6);
-    color: aliceblue;
+    text-shadow: 1px 2px 1px rgba(26, 13, 1, 0.774);
+    
+    color: rgb(255, 239, 228);
 }
 
 
 
 
 #modeling-article {
-    background-color: rgb(211, 200, 169);
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    background-color: rgb(230, 217, 184);
     width: 80vw;
     text-align: center;
     border-radius: 10px;
@@ -206,6 +215,7 @@ section.section-apresentation {
 }
 
 #concept-article {
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
     background-color: aliceblue;
     padding: 10px;
 }
@@ -231,7 +241,7 @@ section.section-apresentation {
 
 #skill-container .skillpercent {
     font-weight: bold;
-    color: rgb(241, 220, 195);
+    color: rgb(92, 51, 5);
 }
 
 #skill-container .barra {
@@ -244,7 +254,7 @@ section.section-apresentation {
 #skill-container .progresso {
     height: 100%;
     width: 80%;
-    background-color: rgb(216, 137, 72);
+    background-color: rgb(245, 149, 23);
     border-radius: 5px;
 }
 
@@ -260,9 +270,9 @@ section.section-apresentation {
     background-image: url(../media/portfolio/Foto_Perfil_Insta.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    border: solid 4px rgb(48, 20, 1);
+    border: solid 4px rgb(161, 118, 69);
     border-radius: 25px;
-    box-shadow: 2px 2px 5px rgba(36, 20, 0, 0.671);
+    box-shadow: 4px 4px 0px rgb(158, 90, 0);
 }
 
 
