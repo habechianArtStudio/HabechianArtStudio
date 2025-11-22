@@ -155,7 +155,7 @@ p {
     height: 20%;
     width: 60vw;
     font-family: 'Grandstander Bold', 'Arial', 'Verdana';
-    font-size: 1.2em;
+    font-size: .8em;
     background-color: var(--cor-text);
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
