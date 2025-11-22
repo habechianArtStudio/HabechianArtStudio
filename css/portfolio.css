@@ -382,3 +382,42 @@ section.section-apresentation {
             color: #f1e6d6;
             font-size: 0.9rem;
         }
+
+
+
+@media (min-width: 1080px) {
+
+    .portfolio-img {
+    height: 40%;
+    width: 10%;
+    
+    }
+
+    section > p {
+        font-size: 1.5em;
+    }
+
+    .h1-section {
+        font-size: 1.5em;
+    }
+
+    .titulos {
+        font-size: 1.5em
+        ;
+    }
+
+    .section-apresentation > p {
+        width: 25%;
+    }
+
+    #modeling-article {
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    background-color: rgb(230, 217, 184);
+    width: 40vw;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(34, 11, 0, 0.596);
+
+    }
+}
