@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root {
-    --cor-botao: rgb(138, 95, 67);
-    --cor-botao-hov: rgb(180, 128, 93);
-    --cor-botao-sombra: rgb(78, 54, 21);
-    --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(135, 170, 202, 0.473);
+    --cor-botao: rgb(67, 98, 138);
+    --cor-botao-hov: rgb(93, 128, 180);
+    --cor-botao-sombra: rgb(12, 21, 97);
+    --cor-text-botao: rgb(27, 50, 126);
+    --cor-text: rgba(52, 148, 238, 0.473);
 }
 
 * {
@@ -29,7 +29,7 @@ header {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: rgb(33, 77, 102);
     background-size: cover;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
 }
@@ -174,7 +174,7 @@ section.section-apresentation {
     height: 5vh;
     width: 100vw;
     background-size: cover;
-    background-image: url(../media/backgroundimages/BG_labbug.png);
+    background-color: rgb(32, 59, 99);
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }
 

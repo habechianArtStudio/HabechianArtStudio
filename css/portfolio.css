@@ -20,7 +20,7 @@
     --cor-botao-hov: rgb(180, 128, 93);
     --cor-botao-sombra: rgb(78, 54, 21);
     --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(202, 165, 135, 0.411);
+    --cor-text: rgba(126, 87, 55, 0.411);
 }
 
 * {
@@ -44,19 +44,19 @@ header {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: #a37c53;
     background-size: cover;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
 }
 
 header > h1 {
-    color: var(--cor-text-botao);
-    font-family: Grandstander, Verdana, Geneva, Tahoma, sans-serif;
+    color: #e4c7a9;
+    font-family: 'Grandstander', 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
 }
 
 header > a {
     font-family: 'Grandstander', 'Arial', 'Verdana';
-    font-weight: 100;
+    font-weight: 200;
     text-align: center;
     justify-items: center;
     width: 20vw;
@@ -96,7 +96,6 @@ section {
     
     display: flex;
     flex-flow: column nowrap;
-    
     justify-self: center;
     align-items: center;
     justify-items: center;
@@ -215,20 +214,29 @@ p {
 section.section-apresentation {
     padding-top: 15vh;
     padding-bottom: 10px;
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-items: center;
     align-items: center;
-    align-content: space-around;
-    justify-content: space-around;
+    align-content: space-evenly;
+    justify-content: space-evenly;
     background-size: cover;
     background-position: center;
 }
 
+.section-apresentation img {
+    
+    width: 50vw;
+}
+
+.apresentation-section-text {
+    width: 50vw;
+}
+
 .section-apresentation h1 {
-    margin: 10px;
+    margin: 5px;
     font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
     color: rgb(252, 242, 232);
     background-color: rgb(161, 118, 69);
@@ -241,9 +249,9 @@ section.section-apresentation {
 
 .section-apresentation p {
     font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
-    
-    
-    color: rgb(107, 47, 7);
+    width: 50vw;
+    height: 60%;
+    color: rgb(255, 236, 224);
 }
 
 
@@ -307,16 +315,11 @@ section.section-apresentation {
     border-radius: 5px;
 }
 
-.logo-img-intro img {
-    height: 300px;
-    width: 100%;
-    
-}
 
 .portfolio-img {
-    height: 30%;
-    width: 30%;
-    background-image: url(../media/portfolio/Foto_Perfil_Insta.jpg);
+    height: 300px;
+    width: 300px;
+    background-image: url(../media/portfolio/PortfolioPhoto.jpg);    
     background-size: cover;
     background-repeat: no-repeat;
     border: solid 4px rgb(161, 118, 69);
@@ -341,7 +344,7 @@ section.section-apresentation {
     height: 5vh;
     width: 100vw;
     background-size: cover;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: #855d32;
     background-position: bottom;
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }
@@ -388,8 +391,8 @@ section.section-apresentation {
 @media (min-width: 1080px) {
 
     .portfolio-img {
-    height: 40%;
-    width: 10%;
+    height: 400px;
+    width: 300px;
     
     }
 

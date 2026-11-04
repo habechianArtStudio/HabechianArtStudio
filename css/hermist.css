@@ -5,7 +5,7 @@
     --cor-botao-hov: rgb(180, 128, 93);
     --cor-botao-sombra: rgb(78, 54, 21);
     --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(202, 165, 135, 0.411);
+    --cor-text: rgba(153, 107, 69, 0.562);
 }
 
 * {
@@ -181,7 +181,7 @@ section.section-apresentation {
     height: 5vh;
     width: 100vw;
     background-size: cover;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: rgb(90, 57, 38);
     background-position: bottom;
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }

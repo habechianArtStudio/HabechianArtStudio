@@ -43,7 +43,7 @@ header {
     padding-right: 10%;
     align-items: center;
     box-shadow: 0px 5px 10px rgba(39, 26, 1, 0.685);
-    background-image: url(../media/backgroundimages/BG_claro.png);
+    background-color: #f5ca9d;
 }
 
 header a {
@@ -52,7 +52,7 @@ header a {
 }
 
 header p {
-    font-family: 'Grandstander','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Grandstander Bold','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
 }
 
@@ -94,7 +94,7 @@ section {
     flex-flow: row nowrap;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/jogos/KR/concept/3.png);
+    background-image: url(../media/jogos/KR/concept/4.png);
     background-size: cover;
     background-position: center;
 }
@@ -498,7 +498,7 @@ section#intro input {
     
     align-self: center;
     height: 20px;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: rgb(219, 168, 100);
     box-shadow: 0px 5px 10px black;
     background-size: 200%;
     border-radius: 10px 10px 0px 0px ;
@@ -509,7 +509,7 @@ section#intro input {
     width: 100%;
     align-self: center;
     height: 20px;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    background-color: rgb(219, 168, 100);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.63);
     background-size: 200%;
     border-radius: 10px 10px 0px 0px;
@@ -531,7 +531,7 @@ section#intro input {
     border-radius: 0px 0px 10px 10px;
     height: 200px;
     align-self: center;
-    background-color: #eed08ec4;
+    background-color: #776743da;
 }
 
 
@@ -548,7 +548,7 @@ section#intro input {
     height: 75%;
     width: 50%;
     align-self: center;
-    background-color: #dfcda6cb;
+    background-color: #776743da;
     font-family: 'Grandstander', 'Arial', 'Verdana';;
 }
 
@@ -562,7 +562,7 @@ section#intro input {
     justify-self: center;
     width: 50%;
     text-decoration: none;
-    color: rgb(170, 135, 102);
+    color: rgb(216, 166, 119);
     background-color: #855d33;
     border: solid 4px rgb(151, 119, 89);
     padding: 10px;
@@ -594,9 +594,10 @@ section#intro input {
 }
 
 .main-descricao-2 p {
-    color: #684c2e;
-    font-family: 'Grandstander ExtraBold', 'Grandstander', 'Arial', 'Verdana';
+    color: #fffbf8;
+    font-family: 'Grandstander', 'Arial', 'Verdana';
     font-size: 1.75em;
+    text-shadow: 1px 2px #251911;
 }
 
 
@@ -636,6 +637,8 @@ ul.menu-list > li {
 .menu-list a {
     color: #684c2e;
     text-decoration: none;
+    font-family: 'Grandstander', 'Arial', 'Verdana';
+    font-size: 1.75em;
 }
 
 ul.menu-list > li:hover {
@@ -683,24 +686,29 @@ a.main-image-link:hover {
 /* SECAO DE SEPARAR AS SECTIONS DE GAMES E SERIES*/
 .separar-section {
     font-family: 'Grandstander','Grandstander ExtraBold', 'Arial', 'Verdana';
-    color: aliceblue;
+    color: #9c5f0f;
     display: flex;
+    font-size: 1.2em;
     text-align: center;
     text-justify: center;
     justify-content: center;
     align-content: center;
-    border-bottom: solid 5px #4b3014;
-    height: 50px;
-    background-image: url(../media/backgroundimages/BG_madeira.png);
+    border-bottom: solid 8px #7e480f;
+    height: 60px;
+    background-color: rgb(235, 198, 142);
     background-size: 150%;
-    box-shadow: 0px 3px 10px black;
+    box-shadow: 0px 5px 10px rgb(66, 4, 4);
+    
 }
 
 .separar-section h1 {
     align-self: center;
-    font-size: 1.8em;
-    text-shadow: 1px 2px 0px rgba(39, 22, 2, 0.753);
+    align-content: center;
+    font-size: 2em;
+    text-shadow: 0px -2px 0px rgb(255, 207, 102);
     width: 55vw;
+    height: 50px;
+    justify-self: center;
 }
 
 .social-icon-link {
