@@ -168,7 +168,7 @@ section {
 .labbug-img {
     width: 150px;
     height: 150px;
-    background-color: #3a2c1d;
+    background-color: #1f1d3a;
     align-self: center;
     background-size: cover;
     background-image: url(../media/jogos/LB/LOGO_2.png);
@@ -188,7 +188,7 @@ section {
     flex-flow: row nowrap;
     align-content: center;
     justify-content: center;
-    background-image: url(../media/jogos/EXPO2900/concept/1.png);
+    background-image: url(../media/jogos/EXPO2900/concept/11.png);
     background-size: cover;
     background-position: right;
     

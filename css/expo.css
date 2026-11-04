@@ -135,7 +135,7 @@ section.section-apresentation {
     align-items: center;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/jogos/EXPO2900/concept/1.png);
+    background-image: url(../media/jogos/EXPO2900/concept/11.png);
     background-size: cover;
     background-position: center;
 }
@@ -194,7 +194,7 @@ section.section-apresentation {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    height: 70%;
+    height: 60%;
     width: 100vw;
 }
 
@@ -205,6 +205,19 @@ section.section-apresentation {
     margin-top: 10px;
     border-radius: 20px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
+}
+
+.full-img-sec {
+    padding-bottom: 30vh;
+}
+
+.full-img-sec img {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 90%;
+    width: 100vw;
 }
 
 /*QUANDO FICAR PEQUENA*/
