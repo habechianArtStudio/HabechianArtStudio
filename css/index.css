@@ -138,6 +138,26 @@ section {
     background-position: center;
 }
 
+.medoprofundo-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+    background-image: url(../media/jogos/MP/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.BR-CN-div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+    background-image: url(../media/concept/BR-CN/1.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .labbug-descricao-div {
     background-color: #c5dee777;
     border-radius: 15px;
@@ -271,6 +291,46 @@ section {
 }
 
 .herancademisterios-img:hover {
+    transform: scale(1.3);
+}
+
+.medoprofundo-img {
+    width: 200px;
+    height: 200px;
+    background-color: #221e21;
+    align-self: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../media/jogos/MP/LOGO.png);
+    box-shadow: 7px 7px 0px rgb(116, 36, 4);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
+
+    transition: all 0.3s;
+}
+
+.medoprofundo-img:hover {
+    transform: scale(1.3);
+}
+
+.BR-CN-img {
+    width: 200px;
+    height: 200px;
+    background-color: #331e05;
+    align-self: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../media/concept/BR-CN/2.png);
+    box-shadow: 7px 7px 0px rgb(114, 42, 1);
+    border-radius: 25px;
+    border: solid 3px aliceblue;
+
+    transition: all 0.3s;
+}
+
+.BR-CN-img:hover {
     transform: scale(1.3);
 }
 
@@ -647,12 +707,13 @@ ul.menu-list > li:hover {
 }
 
 .main-image-logo {
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../media/jogos/KR/LOGO.png);
     border: solid 3px aliceblue;
     border-radius: 10px;
-    background-color: #251911;
+    background-color: #160c05;
     box-shadow: 5px 5px 0px rgb(116, 57, 2);
     
     
@@ -678,6 +739,7 @@ a.main-image-link:hover {
 }
 
 .main-image-container {
+    
     display: flex;
     justify-content: center;
     align-content: center;
