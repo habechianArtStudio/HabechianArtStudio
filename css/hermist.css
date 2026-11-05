@@ -170,7 +170,7 @@ section.section-apresentation {
 }
 
 .full-img-sec {
-    padding-bottom: 30vh;
+    
     width: 100vw;
 }
 
@@ -182,6 +182,7 @@ section.section-apresentation {
     height: 100vh;
     width: 100vw;
     max-width: 100%;
+    min-height: 20vh;
 }
 
 
@@ -237,54 +238,82 @@ section.section-apresentation {
 @media (max-width: 1080px) {
 
 .logo-img-intro img {
+    min-width: 200px;
+}
+
+.section-apresentation p {
+    height: 50px;
+}
+
+.section-separacao {
+    height: 8vh;
+}
+
+.img-div img {
+    max-width: 90%;
+}
+
+.logo-img-intro img {
     height: 150px;
     width: 150px;
     margin-bottom: 20px;
 }
 
+.full-img-sec {
+    height: 30vh;
+    padding-bottom: 0;
+}
 
+.full-img-sec img {
+    height: 30vh;
+    background-size: cover;
+    object-fit: cover;
 
-    section p {
-        font-size: .9em;
-        margin: 10px;
-    }
+}
 
-    section.section-apresentation {
-        flex-flow: column-reverse nowrap;
-        align-content: flex-start;
-        justify-content: flex-start;
-        
-    }
+section p {
+    font-size: .9em;
+    margin: 10px;
+}
 
-    section.section-apresentation p {
-        
-        font-size: 0.8em;
-    }
+section.section-apresentation {
+    flex-flow: column-reverse nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    
+}
 
-    .logo-div {
-        height: 70px;
-        width: 70px;
-    }
+section.section-apresentation p {
+    
+    font-size: 0.8em;
+}
 
-    .horizontal-section {
-        display: flex;
-        flex-flow: column nowrap;
-        align-content: space-between;
-        justify-content: space-between;
-        align-items: space-around;
-        justify-items: space-around;
-    }
+.logo-div {
+    height: 70px;
+    width: 70px;
+}
 
-    .horizontal-section div {
-        display: flex;
-        flex-flow: row nowrap;
-    }
+.horizontal-section {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: space-around;
+    justify-items: space-around;
+}
 
-    .horizontal-section p {
-        height: 75%;
-    }
+.horizontal-section div {
+    display: flex;
+    flex-flow: row nowrap;
+}
 
-    div.logo-img-intro {
+.horizontal-section p {
+    height: 75%;
+}
+
+div.logo-img-intro {
     width: 50vw;
     display: flex;
     align-content: center;
@@ -315,14 +344,15 @@ section.section-apresentation {
     justify-content: center;
     background-size: auto;
     background-position: bottom;
-    height: 100vh;
+    height: 90%;
     width: 100%;
+    object-fit: cover;
 }
 
     .img-div {
     
-        height: 75vh;
-        width: 100vw;
+        height: auto;
+        width: 95%;
     }
 
     .img-div > img {
@@ -330,7 +360,8 @@ section.section-apresentation {
         background-repeat: no-repeat;
         
         height: 95%;
-        width: 100%;
+        width: 95%;
+        max-width: 95%;
     
     
     }
@@ -342,10 +373,22 @@ section.section-apresentation {
     .horizontal-section {
         display: flex;
         flex-flow: row nowrap;
-        flex-grow: 0;
-        flex-shrink: 1;
-        align-content: center;
-        justify-content: center;
+        align-items: center;     /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        gap: 20px;               /* Dá um espaço entre o texto e a imagem */
+        height: auto;            /* Deixa a altura se adaptar ao conteúdo */
+        min-height: 100vh;        /* Mas garante um tamanho mínimo bonito */
+    }
+
+    .horizontal-section .img-div {
+        width: 50%; /* <-- A DIV DA IMAGEM AGORA OCUPA SÓ METADE */
+        height: auto;
+    }
+
+    .horizontal-section img {
+        width: 100%; /* A imagem preenche a metade da div */
+        height: auto;
+        border-radius: 20px;
     }
 
     .horizontal-section p {
@@ -354,7 +397,7 @@ section.section-apresentation {
     }
 
     .horizontal-section img {
-        height: 95%;
+        height: 100%;
         width: 95%;
     }
 
@@ -363,8 +406,7 @@ section.section-apresentation {
         width: 60%;
     
     }
-
-    
+  
 
     .section-apresentation h1 {
     margin: 10px;
@@ -375,25 +417,7 @@ section.section-apresentation {
     }
 
     
-
-    
 }
 
-@media (min-width: 1921px) {
-    .img-div {
-    
-    height: 100%;
-    width: 100vw;
-    }
 
-    .img-div > img {
-    height: 100%;
-    width: 60%;
-    
-    }
-
-    .vertical-section img {
-        width: 50%;
-    }
-}
 
