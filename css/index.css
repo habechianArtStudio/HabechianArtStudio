@@ -247,7 +247,7 @@ section {
 .lixaodobairro-img {
     width: 150px;
     height: 150px;
-    background-color: #3a2c1d;
+    background-color: #3d1606;
     align-self: center;
     background-size: cover;
     background-image: url(../media/series/LB/LOGO.png);
@@ -1055,6 +1055,11 @@ section#final {
 /* QUANDO FICAR PEQUENO */
 
 @media  (max-width: 1080px) {
+
+    .separar-section {
+    font-size: 0.7em;
+    }
+
     .main-image-logo {
     height: 100px;
     width: 100px;
