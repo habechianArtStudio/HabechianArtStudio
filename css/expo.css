@@ -135,7 +135,7 @@ section.section-apresentation {
     align-items: center;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/jogos/EXPO2900/concept/11.png);
+    background-image:linear-gradient(rgba(66, 47, 25, 0.699), rgba(0, 0, 0, 0.281)), url(../media/jogos/EXPO2900/concept/11.png);
     background-size: cover;
     background-position: center;
 }

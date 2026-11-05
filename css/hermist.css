@@ -142,7 +142,7 @@ section.section-apresentation {
     align-items: center;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/series/HM/concept/4.png);
+    background-image:linear-gradient(rgba(66, 47, 25, 0.815), rgba(0, 0, 0, 0.151)), url(../media/series/HM/concept/4.png);
     background-size: cover;
     background-position: center;
 }
@@ -169,6 +169,20 @@ section.section-apresentation {
     
 }
 
+.full-img-sec {
+    padding-bottom: 30vh;
+    width: 100vw;
+}
+
+.full-img-sec img {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
 
 
 .section-separacao {
@@ -228,7 +242,7 @@ section.section-apresentation {
     margin-bottom: 20px;
 }
 
-    
+
 
     section p {
         font-size: .9em;
@@ -293,6 +307,17 @@ section.section-apresentation {
         
         width: 60%;
     }
+
+.full-img-sec img {
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    background-size: auto;
+    background-position: bottom;
+    height: 100vh;
+    width: 100%;
+}
 
     .img-div {
     
