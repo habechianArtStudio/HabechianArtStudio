@@ -1059,6 +1059,9 @@ section#final {
     height: 100px;
     width: 100px;
     }
+    .main-image-logo {
+    height: 50px;
+    }
 
     .medoprofundo-img {
     width: 150px;
