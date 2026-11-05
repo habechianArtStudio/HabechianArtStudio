@@ -1057,7 +1057,8 @@ section#final {
 @media  (max-width: 1080px) {
 
     .separar-section {
-    font-size: 0.7em;
+    font-size: 0.7em;    
+    height: 40px;
     }
 
     .main-image-logo {

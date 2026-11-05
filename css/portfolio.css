@@ -384,8 +384,45 @@ section.section-apresentation {
             background-color: #3a2c1d;
             color: #f1e6d6;
             font-size: 0.9rem;
-        }
+}
 
+.skills-sec {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    
+}
+
+.skills-sec h1 {
+    width: 30vw;
+}
+
+
+@media (max-width: 1080px) {
+    
+    .skills-sec {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.skills-sec h1 {
+    width: 60vw;
+}
+    
+    section.section-apresentation {
+    padding-top: 15vh;
+    padding-bottom: 10px;
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    }
+    
+    .portfolio-img {
+    height: 200px;
+    width: 100px;
+    }
+}
 
 
 @media (min-width: 1080px) {
