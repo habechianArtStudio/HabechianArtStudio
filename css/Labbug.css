@@ -151,6 +151,24 @@ section.section-apresentation {
     color: rgb(247, 247, 247);
 }
 
+.full-img-sec {
+    width: 100vw;
+    height: auto;      /* Deixa a altura crescer conforme a imagem */
+    overflow: hidden;  /* Segurança extra para não vazar */
+    display: flex;     /* Ajuda a centralizar a imagem */
+    justify-content: center;
+    padding: 0;        /* Garante que não há espaçamento */
+}
+
+.full-img-sec img {
+    aspect-ratio: 16/9;
+    width: 100%;       /* Ocupa a largura da tela */
+    height: auto;      /* Mantém a proporção da imagem original */
+    object-fit: cover; /* Preenche sem distorcer */
+    display: block;    /* Remove espaços em branco embaixo da imagem */
+    background-position: top;
+}
+
 .logo-img-intro img {
     height: 300px;
     width: 300px;
@@ -233,6 +251,14 @@ section.section-apresentation {
         font-size: 0.8em;
     }
 
+    .full-img-sec {
+        height: 40vh; /* Ocupa 40% da tela do celular */
+    }
+    .full-img-sec img {
+        height: 100%; /* Preenche os 40vh da seção */
+        width: 100vw;
+    }
+
     .logo-div {
         height: 70px;
         width: 70px;
@@ -269,6 +295,13 @@ section.section-apresentation {
 
     p {
         width: 60%;
+    }
+
+    .full-img-sec img {
+        height: auto; 
+        width: 100%;
+        max-height: 100vh; /* Impede que passe da tela, mas deixa fluir */
+        object-fit: cover;
     }
 
     .img-div {
