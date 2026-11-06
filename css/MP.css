@@ -249,8 +249,8 @@ section.section-apresentation {
     }
 
     .full-img-sec {
-        height: 30vh;
-        padding-bottom: 0;
+        height: auto;
+        
     }
 
     .full-img-sec img {
