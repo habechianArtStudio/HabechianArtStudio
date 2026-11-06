@@ -337,17 +337,17 @@ div.logo-img-intro {
         width: 60%;
     }
 
-.full-img-sec img {
-    align-self: center;
-    justify-self: center;
-    align-content: center;
-    justify-content: center;
-    background-size: auto;
-    background-position: bottom;
-    height: 90%;
-    width: 100%;
-    object-fit: cover;
-}
+    .full-img-sec img {
+        align-self: center;
+        justify-self: center;
+        align-content: center;
+        justify-content: center;
+        background-size: auto;
+        background-position: bottom;
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
+    }
 
     .img-div {
     

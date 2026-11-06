@@ -135,9 +135,25 @@ section.section-apresentation {
     align-items: center;
     align-content: space-around;
     justify-content: space-around;
-    background-image: url(../media/series/LB/concept/1.png);
+    background-image: linear-gradient(rgba(63, 34, 17, 0.6), rgba(0, 0, 0, 0.74)), url(../media/series/LB/concept/1.png);
     background-size: cover;
     background-position: center;
+}
+
+.full-img-sec {
+    height: auto;
+    width: 100vw;
+}
+
+.full-img-sec img {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 20vh;
 }
 
 .section-apresentation h1 {
@@ -254,6 +270,18 @@ div.img-quadrada {
 
     section.section-apresentation p {
         font-size: 0.8em;
+    }
+
+    .full-img-sec {
+    height: 30vh;
+    padding-bottom: 0;
+    }
+
+    .full-img-sec img {
+    height: 30vh;
+    background-size: cover;
+    object-fit: cover;
+
     }
 
     .logo-div {
