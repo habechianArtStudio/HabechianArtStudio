@@ -228,13 +228,23 @@ section.section-apresentation {
 
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
+    
     .logo-img-intro img {
         height: 150px;
         width: 150px;
         margin-bottom: 20px;
     }
 
-    
+    .full-img-sec {
+    height: 30vh;
+    padding-bottom: 0;
+    }
+
+    .full-img-sec img {
+    height: 30vh;
+    background-size: cover;
+    object-fit: cover;
+    }
 
     section p {
         font-size: .9em;
