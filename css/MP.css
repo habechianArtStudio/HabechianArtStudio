@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root {
-    --cor-botao: rgb(138, 78, 67);
-    --cor-botao-hov: rgb(180, 106, 93);
+    --cor-botao: rgb(138, 67, 88);
+    --cor-botao-hov: rgb(156, 59, 88);
     --cor-botao-sombra: rgb(51, 9, 9);
     --cor-text-botao: rgb(214, 161, 145);
-    --cor-text: rgba(202, 135, 168, 0.473);
+    --cor-text: rgba(126, 92, 120, 0.281);
 }
 
 * {
@@ -29,7 +29,7 @@ header {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-color: rgb(97, 53, 55);
+    background-color: rgb(100, 47, 68);
     background-size: cover;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
 }
@@ -74,6 +74,21 @@ p {
     box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
 }
 
+.full-img-sec {
+    height: auto;
+    width: 100vw;
+}
+
+.full-img-sec img {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 20vh;
+}
 
 
 .logo-div {
@@ -192,7 +207,7 @@ section.section-apresentation {
     height: 5vh;
     width: 100vw;
     background-size: cover;
-    background-color: rgb(141, 86, 91);
+    background-color: rgb(100, 47, 68);
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }
 
@@ -228,12 +243,22 @@ section.section-apresentation {
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
     .logo-img-intro img {
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
         margin-bottom: 20px;
     }
 
-    
+    .full-img-sec {
+        height: 30vh;
+        padding-bottom: 0;
+    }
+
+    .full-img-sec img {
+        height: 30vh;
+        background-size: cover;
+        object-fit: cover;
+
+    }
 
     section p {
         font-size: .9em;
@@ -276,10 +301,20 @@ section.section-apresentation {
 
     
 
+
+    
+
     
 }
 
 @media (min-width: 1080px) {
+
+    .logo-img-intro {
+        height: 300px;
+        width: 300px;
+        aspect-ratio: 1;
+        background-size: cover;
+    }
 
     section {
         height: 80vh;
@@ -288,6 +323,19 @@ section.section-apresentation {
     p {
         width: 60%;
     }
+    
+    .full-img-sec img {
+        align-self: center;
+        justify-self: center;
+        align-content: center;
+        justify-content: center;
+        background-size: auto;
+        background-position: bottom;
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
+    }
+
 
     .img-div {
     

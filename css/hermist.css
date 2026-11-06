@@ -238,7 +238,9 @@ section.section-apresentation {
 @media (max-width: 1080px) {
 
 .logo-img-intro img {
-    min-width: 200px;
+    width: 280px;
+    height: 150px;
+    aspect-ratio: 1;
 }
 
 .section-apresentation p {
@@ -253,11 +255,7 @@ section.section-apresentation {
     max-width: 90%;
 }
 
-.logo-img-intro img {
-    height: 150px;
-    width: 150px;
-    margin-bottom: 20px;
-}
+
 
 .full-img-sec {
     height: 30vh;
