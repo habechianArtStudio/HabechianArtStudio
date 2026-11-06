@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root {
-    --cor-botao: rgb(158, 120, 95);
-    --cor-botao-hov: rgb(180, 128, 93);
+    --cor-botao: rgb(158, 147, 95);
+    --cor-botao-hov: rgb(152, 158, 64);
     --cor-botao-sombra: rgb(41, 25, 4);
-    --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(202, 184, 135, 0.473);
+    --cor-text-botao: rgb(190, 214, 145);
+    --cor-text: rgba(173, 202, 135, 0.226);
 }
 
 * {
@@ -29,7 +29,7 @@ header {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-color: rgb(128, 97, 59)    ;
+    background-color: rgb(121, 128, 59)    ;
     background-size: cover;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.377);
 }
@@ -71,7 +71,7 @@ p {
     font-size: 1.2em;
     background-color: var(--cor-text);
     border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
+    box-shadow: 2px 2px 8px rgba(17, 22, 1, 0.705);
 }
 
 
@@ -190,7 +190,7 @@ section.section-apresentation {
     height: 5vh;
     width: 100vw;
     background-size: cover;
-    background-color: rgb(78, 56, 28);
+    background-color: rgb(67, 78, 28);
     background-position: bottom;
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
 }
@@ -212,13 +212,13 @@ section.section-apresentation {
     align-items: center;
     justify-items: center;
     height: 70%;
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
 }
 
 .img-div > img {
     height: 200px;
-    width: 90vw;
+    width: 90%;
     background-size: contain;
     margin-top: 10px;
     border-radius: 20px;
@@ -232,7 +232,8 @@ div.img-quadrada {
     align-items: center;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 40%;
+    width: 50%;
+    height: auto;
 }
 
 .img-quadrada img {
@@ -242,8 +243,17 @@ div.img-quadrada {
     align-items: center;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 50%;
+    width: 60%;
+    height: 60%;
+    aspect-ratio: 1;
 
+}
+
+.text-div {
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    
 }
 
 /*QUANDO FICAR PEQUENA*/
@@ -350,11 +360,22 @@ div.img-quadrada {
     .horizontal-section {
         display: flex;
         flex-flow: row nowrap;
+        
         flex-grow: 0;
         flex-shrink: 1;
         align-content: center;
         justify-content: center;
     }
+
+    .horizontal-section p {
+        text-align: center;
+        height: auto;
+        
+        
+        
+    }
+
+
 
     .horizontal-section p {
         

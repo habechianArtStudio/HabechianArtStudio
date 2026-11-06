@@ -74,7 +74,13 @@ p {
     box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
 }
 
+.vertical-section p {
+    height: auto;
+}
 
+.horizontal-section p {
+    height: auto;
+}
 
 .logo-div {
     display: flex;
@@ -208,7 +214,7 @@ section.section-apresentation {
 }
 
 .full-img-sec {
-    padding-bottom: 30vh;
+    padding-bottom: 18vh;
 }
 
 .full-img-sec img {
@@ -323,7 +329,7 @@ section.section-apresentation {
     }
 
     .vertical-section img {
-        width: 70%;
+        width: 50%;
     
     }
 
