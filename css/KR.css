@@ -5,7 +5,7 @@
     --cor-botao-hov: rgb(180, 128, 93);
     --cor-botao-sombra: rgb(78, 54, 21);
     --cor-text-botao: rgb(214, 180, 145);
-    --cor-text: rgba(202, 168, 135, 0.473);
+    --cor-text: rgba(224, 185, 146, 0.473);
 }
 
 * {
@@ -57,7 +57,7 @@ section {
 }
 
 p {
-    width: 60%;
+    width: 40%;
     margin: 10px;
     color: aliceblue;
     text-justify: center;
@@ -151,6 +151,45 @@ section.section-apresentation {
     color: rgb(236, 236, 236);
 }
 
+.horizontal-section {
+        height: 60vh;
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 0;
+        flex-shrink: 0;
+        align-content: center;
+        align-items: center;
+        justify-content: space-around;
+}
+
+.horizontal-section.horizontal-section-inimigos {
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.horizontal-section p {
+    height: auto;
+    margin: 20px;
+    width: 50%;
+}
+
+.vertical-section {
+    margin-top: 20px;
+    height: 80vh;
+    justify-content: space-around;
+}
+
+.vertical-section p {
+    height: auto;
+}
+
+
 .logo-img-intro img {
     height: 300px;
     width: 300px;
@@ -212,17 +251,20 @@ section.section-apresentation {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
+
+
 .img-div > img:not(.personagem) {
     
-    width: 80vw;
+    width: 60%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: auto;
     background-size: contain;
-    border-radius: 20px;
+    object-fit: contain;
+    border-radius: 10px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
 
@@ -230,14 +272,14 @@ section.section-apresentation {
 .img-div.img-3x2 > img:not(.personagem) {
     aspect-ratio: 3000 / 2000; 
     height: auto; /* Deixa a altura fluida baseada na proporção */
-    object-fit: contain; /* 'contain' mostra a imagem inteira, sem cortes. Mude para 'cover' se preferir */
-    border-radius: 20px;
+    object-fit: cover; /* 'contain' mostra a imagem inteira, sem cortes. Mude para 'cover' se preferir */
+    border-radius: 10px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
 
 .full-img-sec {
         width: 100dvw;
-        height: 110vh;
+        height: 108vh;
         overflow: clip;
     }
 
@@ -249,6 +291,22 @@ section.section-apresentation {
     height: 100%;
     width: 100%;
 }
+
+/* ============================================
+   IMAGENS MAIORES - SECTION INIMIGOS
+   ============================================ */
+
+.img-div.img-inimigos > img:not(.personagem) {
+    width: 95%; /* Aumenta de 60% (padrão) para 90% */
+    aspect-ratio:  3/2.1;
+    height: auto;
+    object-fit: cover;
+    max-height: 90%; /* Garante que não vai vazar para fora da tela */
+}
+
+/* Ajuste opcional para o desktop */
+  
+
 
 .img-transparent img {
     background-color: rgb(26, 9, 1);
@@ -390,6 +448,63 @@ section.section-apresentation {
     line-height: 1.2;
 }
 
+/* ============================================
+   SETAS DO CARROSSEL
+   ============================================ */
+
+.carrossel-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(138, 95, 67, 0.85); /* Cor do seu tema */
+    color: var(--cor-text-botao);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    user-select: none;
+    
+    /* Começa invisível e escondido */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Quando o JS adicionar a classe, ela aparece */
+.carrossel-seta.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrossel-seta:hover {
+    background-color: var(--cor-botao-hov);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Posições */
+.seta-esq {
+    left: 2vw; /* Afastado um pouco da borda */
+}
+
+.seta-dir {
+    right: 2vw;
+}
+
+/* No celular, deixa as setas um pouco menores */
+@media (max-width: 1080px) {
+    .carrossel-seta {
+        width: 35px;
+        height: 35px;
+        display: none; /* Esconde as setas no mobile (o dedo serve como seta) */
+    }
+}
+
 
 /* ============================================
    CARROSSEL HORIZONTAL COM ARRASTE
@@ -439,8 +554,8 @@ section.carrossel-section {
     height: clamp(180px, 55vh, 620px);
     aspect-ratio: 16 / 9;      /* proporção 1920×1080 */
     width: auto;
-    object-fit: cover;
-    border-radius: 20px;
+    object-fit: contain;
+    border-radius: 10px;
     box-shadow: 2px 6px 14px rgba(0, 0, 0, 0.55);
     pointer-events: none;      /* a imagem não "rouba" o mouse — o track captura */
     user-select: none;
@@ -549,7 +664,29 @@ section.carrossel-section {
         width: 70px;
     }
 
+    .horizontal-section.horizontal-section-inimigos {
+        height: 50vh;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: space-around;
+        justify-items: space-around;
+    }
+
+    .horizontal-section.horizontal-section-inimigos div {
+        justify-content: center;
+        align-content: center;
+    }
+
+    .img-div.img-inimigos > img:not(.personagem) {
+        aspect-ratio:  3/2.4;
+        width: 80%;
+        height: 100%;
+    }
+
     .horizontal-section {
+        height: 40vh;
         padding-top: 20px;
         padding-bottom: 10px;
         display: flex;
@@ -558,6 +695,12 @@ section.carrossel-section {
         justify-content: space-between;
         align-items: space-around;
         justify-items: space-around;
+    }
+    
+    .vertical-section {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 35vh;
     }
 
     .horizontal-section div {
@@ -569,10 +712,27 @@ section.carrossel-section {
         height: auto;
     }
 
+
+    .carrossel-seta {
+        display: flex; /* VOLTOU A APARECER */
+        width: 40px;   /* Um pouco maior para o clique do dedo */
+        height: 40px;
+        background-color: rgba(138, 95, 67, 0.9);
+    }
+
+    .seta-esq {
+        left: 10px; /* Mais colado na borda no celular */
+    }
+
+    .seta-dir {
+        right: 10px;
+    }
+}
+
     
 
     
-}
+
 
 @media (min-width: 1080px){
 
@@ -589,48 +749,10 @@ section.carrossel-section {
     width: 100vw;
     }
 
-    .img-div {
-    
-        height: 90%;
-        width: 100%;
-    }
 
-    .img-div > img:not(.personagem) {
-        background-size: cover;
-        
-        height: 95%;
-        width: 90vw;
-    
-    
-    }
 
     .section-apresentation h1 {
         font-size: 4em;
-    }
-
-    .horizontal-section {
-        display: flex;
-        flex-flow: row nowrap;
-        flex-grow: 0;
-        flex-shrink: 1;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .horizontal-section p {
-        
-        margin: 20px;
-        width: 60%;
-    }
-
-    .horizontal-section img:not(.personagem) {
-        height: 90%;
-        width: 95%;
-    }
-
-    .vertical-section img:not(.personagem) {
-        width: 45%;
-    
     }
 
     
@@ -649,7 +771,5 @@ section.carrossel-section {
     
     }
 
-    .vertical-section img:not(.personagem) {
-        width: 50%;
-    }
+    
 }
