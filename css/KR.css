@@ -333,13 +333,13 @@ section.section-apresentation {
 /* Esquerda: encostado na borda esquerda, vazando um pouco */
 .personagem-esq {
     left: 0;
-    translate: -15% 50%;
+    translate: 10% 50%;
 }
 
 /* Direita: encostado na borda direita, vazando um pouco */
 .personagem-dir {
     right: 0;
-    translate: 15% -200%;
+    translate: -10% -180%;
 }
 
 /* ============================================
@@ -567,27 +567,33 @@ section.carrossel-section {
 
 /* Navegadores com scroll-driven nativo
    (Chrome 115+, Edge, OperaGX atual, Safari 26+, Firefox 144+) */
+/* Navegadores com scroll-driven nativo */
 @supports (animation-timeline: view()) {
     .personagem {
         animation: personagemSurge linear both;
         animation-timeline: view();
-        animation-range: entry 0% entry 120%;
+        /* MUDANÇA AQUI: de 'entry' para 'exit 100%' */
+        animation-range: entry 0% exit 100%; 
     }
 
-    /* Esquerdo: fade lento, completa no fim do percurso */
+    /* Esquerdo */
     .personagem-esq {
-        animation-range: entry 90% entry 300%;
+        /* MUDANÇA AQUI: Manteve o entry 90% e adicionou o exit 100% */
+        animation-range: entry 110% exit 20%;
     }
 
-    /* Direito: fade mais rápido → atinge opacity 1 antes do esquerdo */
+    /* Direito */
     .personagem-dir {
-        animation-range: entry -20% entry 100%;
+        /* MUDANÇA AQUI: Manteve o entry -20% e adicionou o exit 100% */
+        animation-range: entry -80% exit 100%;
     }
 }
 
 @keyframes personagemSurge {
-    from { opacity: 0; scale: 0.85; }
-    to   { opacity: 1; scale: 1; }
+    0%   { opacity: 0; scale: 0.85; } /* Começa invisível (entrando) */
+    15%  { opacity: 1; scale: 1.5; }    /* Fica 100% visível */
+    85%  { opacity: 1; scale: 1.5; }    /* Segura 100% visível enquanto rola */
+    100% { opacity: 0; scale: 0.85; } /* Volta a sumir (saindo pelo topo) */
 }
 
 /* Telas pequenas: diminui um pouco */

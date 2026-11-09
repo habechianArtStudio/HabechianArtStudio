@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HabechianArtStudio</title>
 
+    <link rel="shortcut icon" href="../media/favicon/LogoBrancaTransp.png" type="image/x-icon">
+
     <link rel="stylesheet" href="../css/KR.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -410,16 +412,26 @@
             personagens.forEach(el => {
                 const rect = el.getBoundingClientRect();
                 const h = Math.max(rect.height, 1);
-                const entry = (vh - rect.top) / h;
 
-                // Direito completa mais cedo (mesma lógica do CSS)
+                // Lógica de entrada (topo do elemento subindo)
+                const entry = (vh - rect.top) / h;
+                // Lógica de saída (base do elemento sumindo para cima)
+                const exit = rect.bottom / h;
+
                 const isRight = el.classList.contains('personagem-dir');
                 const divisor = isRight ? 0.2 : 1.2;
 
-                const ratio = Math.max(0, Math.min(1, entry / divisor));
+                // Calcula a proporção de entrada e de saída (ambas de 0 a 1)
+                const entryRatio = Math.max(0, Math.min(1, entry / divisor));
+                const exitRatio = Math.max(0, Math.min(1, exit / divisor));
+
+                // O ratio final é o menor entre os dois. 
+                // Se estiver saindo da tela, o exitRatio cai para 0, fazendo sumir.
+                const ratio = Math.min(entryRatio, exitRatio);
+
                 el.style.opacity = ratio;
                 el.style.scale = (0.85 + 0.15 * ratio).toFixed(3);
-            });
+                });
         }
 
         function schedule() {
