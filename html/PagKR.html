@@ -26,6 +26,7 @@
         </div>
         
     </section>
+    <!-- SEPARAR SECTION -->
     <section class="section-separacao">
         <h1> 
             <span class="material-symbols-outlined">
@@ -40,7 +41,7 @@
 
     <section class="vertical-section">
         <div class="img-div">
-            <img src="../media/jogos/KR/concept/3.png" alt="">
+            <img src="../media/jogos/KR/concept/icones/UI-1.png" alt="">
         </div>
         
     <p>Se passando em uma ilha, onde haverá alguns inimigos...</p>
@@ -50,16 +51,31 @@
 
     <section class="full-img-sec">
         <div>
-            <img src="../media/jogos/KR/concept/4.png" alt="">
+            <img src="../media/jogos/KR/concept/4.png" alt="">  <!-- Ilustração final do Mapa -->
         </div>
     </section>
 
     <section class="full-img-sec">
         <div>
-            <img src="../media/jogos/KR/concept/2.png" alt="">
+            <img src="../media/jogos/KR/concept/2.png" alt=""> <!-- Imagem do Mapa na Engine-->
+
+            <img src="../media/jogos/KR/concept/icones/2.png" alt="" class="personagem personagem-esq">
+
+            <img src="../media/jogos/KR/concept/icones/1.png" alt="" class="personagem personagem-dir">
         </div>
     </section>
 
+    <section class="section-separacao">
+        <h1> 
+            <span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span> 
+            Vila Goblin
+            <span class="material-symbols-outlined">
+            arrow_back_ios
+            </span> 
+        </h1>
+    </section>
 
     <section class="horizontal-section">
         <div>
@@ -67,13 +83,25 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur co</p>
         </div>
         <div class="img-div">
-            <img src="../media/jogos/KR/concept/3.png" alt="">
+            <img src="../media/jogos/KR/concept/1.png" alt="">
         </div>
     </section>
 
+    <section class="section-separacao">
+        <h1> 
+            <span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span> 
+            UI 
+            <span class="material-symbols-outlined">
+            arrow_back_ios
+            </span> 
+        </h1>
+    </section>
+
     <section class="vertical-section">
-        <div class="img-div">
-            <img src="../media/jogos/KR/concept/5.png" alt="">
+        <div class="img-div img-transparent">
+            <img src="../media/jogos/KR/concept/icones/UI-2.png" alt="">
         </div>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur con</p>
     </section>
@@ -81,13 +109,38 @@
     <section class="horizontal-section">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur co</p>
         <div class="img-div">
-            <img src="../media/jogos/KR/concept/1.png" alt="">
+            <img src="../media/jogos/KR/concept/5.png" alt="">
         </div>
+    </section>
+
+    <section class="carrossel-section">
+    <div class="carrossel-track" id="carrosselKR">
+        <img src="../media/jogos/KR/concept/carrossel/1.png"
+             alt="" class="carrossel-item" draggable="false">
+        <img src="../media/jogos/KR/concept/carrossel/2.png"
+             alt="" class="carrossel-item" draggable="false">
+        <img src="../media/jogos/KR/concept/carrossel/1.png"
+             alt="" class="carrossel-item" draggable="false">
+        <img src="../media/jogos/KR/concept/carrossel/1.png"
+             alt="" class="carrossel-item" draggable="false">
+    </div>
+</section>
+
+    <section class="section-separacao">
+        <h1> 
+            <span class="material-symbols-outlined">
+            arrow_forward_ios
+            </span> 
+            Inimigos 
+            <span class="material-symbols-outlined">
+            arrow_back_ios
+            </span> 
+        </h1>
     </section>
 
     <section class="horizontal-section">
         <div class="img-div">
-            <img src="../media/jogos/KR/concept/5.png" alt="">
+            <img src="../media/jogos/KR/concept/inimigos/1.png" alt="">
         </div>
         <div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur co</p>
@@ -97,10 +150,102 @@
 
     <section class="vertical-section">
         <div class="img-div">
-            <img src="../media/jogos/KR/concept/5.png" alt="">
+            <img src="../media/jogos/KR/concept/inimigos/2.png" alt="">
         </div>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur con</p>
     </section>
+
+    <section class="vertical-section">
+        <div class="img-div">
+            <img src="../media/jogos/KR/concept/inimigos/3.png" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur con</p>
+    </section>
+
+    <!-- --------------------------------------------------------------------------------------- -->
+
+    <script>
+    (function () {
+        // Se o navegador suporta scroll-driven animation nativa, o CSS já resolve.
+        if (CSS.supports('animation-timeline: view()')) return;
+
+        const personagens = document.querySelectorAll('.personagem');
+        if (!personagens.length) return;
+
+        let rafId = null;
+
+        function update() {
+            rafId = null;
+            const vh = window.innerHeight;
+
+            personagens.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const h = Math.max(rect.height, 1);
+                const entry = (vh - rect.top) / h;
+
+                // Direito completa mais cedo (mesma lógica do CSS)
+                const isRight = el.classList.contains('personagem-dir');
+                const divisor = isRight ? 0.2 : 1.2;
+
+                const ratio = Math.max(0, Math.min(1, entry / divisor));
+                el.style.opacity = ratio;
+                el.style.scale = (0.85 + 0.15 * ratio).toFixed(3);
+            });
+        }
+
+        function schedule() {
+            if (rafId === null) rafId = requestAnimationFrame(update);
+        }
+
+        // 1) roda já no carregamento (evita flash)
+        update();
+
+        // 2) atualiza a cada scroll/resize (com throttle via RAF)
+        window.addEventListener('scroll', schedule, { passive: true });
+        window.addEventListener('resize', schedule);
+    })();
+
+
+    (function () {
+        const track = document.getElementById('carrosselKR');
+        if (!track) return;
+
+        let isDown = false;
+        let startX = 0;
+        let startScroll = 0;
+
+        /* Só intercepta MOUSE. Touch deixa o scroll nativo cuidar (mais fluido) */
+        track.addEventListener('pointerdown', (e) => {
+            if (e.pointerType !== 'mouse') return;   // ignora toque
+            if (e.button !== 0) return;              // só botão esquerdo
+
+            isDown = true;
+            startX = e.clientX;
+            startScroll = track.scrollLeft;
+            track.classList.add('arrastando');
+            track.setPointerCapture(e.pointerId);    // continua recebendo eventos mesmo saindo da área
+        });
+
+        track.addEventListener('pointermove', (e) => {
+            if (!isDown) return;
+            const dx = e.clientX - startX;           // arrastar p/ esquerda = dx negativo
+            track.scrollLeft = startScroll - dx;     // conteúdo desloca na direção oposta
+        });
+
+        function endDrag(e) {
+            if (!isDown) return;
+            isDown = false;
+            track.classList.remove('arrastando');
+            try { track.releasePointerCapture(e.pointerId); } catch (_) {}
+        }
+
+        track.addEventListener('pointerup', endDrag);
+        track.addEventListener('pointercancel', endDrag);
+
+        /* Segurança extra: se algo escapar do pointer-events:none, bloqueia arraste nativo */
+        track.addEventListener('dragstart', (e) => e.preventDefault());
+    })();
+    </script>
     
 </body>
 </html>

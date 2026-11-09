@@ -37,12 +37,12 @@ header {
 
 
 
-body {
+html, body {
     height: 100vh;
     width: 100%;
     background-image: url(../media/backgroundimages/kingrush_padrao.png);
     background-size: 40%;
-    overflow-x: hidden; /*Escondendo o que passa da tela no eixo X*/
+    overflow-x: clip; /*Escondendo o que passa da tela no eixo X*/
     
     
 }
@@ -50,10 +50,9 @@ body {
 section {
     display: flex;
     flex-flow: column nowrap;
-    
     height: 60vh;
     width: 95vw;
-    
+    position: relative;
     
 }
 
@@ -219,6 +218,7 @@ section.section-apresentation {
 .img-div > img {
     height: 200px;
     width: 80vw;
+    aspect-ratio: 16/9;
     background-size: contain;
     margin-top: 10px;
     border-radius: 20px;
@@ -226,11 +226,12 @@ section.section-apresentation {
 }
 
 .full-img-sec {
-        width: 100vw;
+        width: 100dvw;
         height: 110vh;
+        overflow: clip;
     }
 
-.full-img-sec img {
+.full-img-sec img:not(.personagem) {
     align-self: center;
     justify-self: center;
     background-size: cover;
@@ -239,8 +240,148 @@ section.section-apresentation {
     width: 100%;
 }
 
+.img-transparent img {
+    background-color: rgb(26, 9, 1);
+}
+
+/* ============================================
+   PERSONAGEM ANIMADO NO SCROLL
+   ============================================ */
+
+/* Estado base — invisível até entrar na tela */
+.personagem {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: clamp(100px, 14vw, 280px);
+    height: auto;
+    pointer-events: none;   /* não bloqueia cliques no conteúdo */
+    z-index: 3;
+    will-change: opacity, scale;
+    opacity: 0;
+    scale: 0.85;
+}
+
+/* Esquerda: encostado na borda esquerda, vazando um pouco */
+.personagem-esq {
+    left: 0;
+    translate: -15% 100%;
+}
+
+/* Direita: encostado na borda direita, vazando um pouco */
+.personagem-dir {
+    right: 0;
+    translate: 15% -200%;
+}
+
+/* ============================================
+   CARROSSEL HORIZONTAL COM ARRASTE
+   ============================================ */
+
+/* Sobrescreve o padrão flex-column das outras sections */
+section.carrossel-section {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    overflow: hidden;          /* impede qualquer vazamento vertical */
+    position: relative;        /* mantém consistência com as demais sections */
+}
+
+.carrossel-track {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 24px;
+    padding: 0 5vw;            /* respiro nas laterais (1ª img não cola na borda) */
+    overflow-x: auto;          /* rola na horizontal */
+    overflow-y: hidden;        /* nada vaza para cima/baixo */
+    scroll-behavior: auto;     /* CRÍTICO: faz o drag responder na hora (sem "smooth") */
+    scrollbar-width: none;     /* Firefox: esconde a barra */
+    -ms-overflow-style: none;  /* Edge/IE antigo: esconde a barra */
+    cursor: grab;
+    user-select: none;
+    overscroll-behavior-x: contain; /* não "puxa" o scroll da página ao chegar no fim */
+}
+
+.carrossel-track img {
+    box-shadow: none;
+}
+
+/* Esconde a barra de rolagem no Chrome / Opera / Safari */
+.carrossel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cursor muda enquanto arrasta */
+.carrossel-track.arrastando {
+    cursor: grabbing;
+}
+
+.carrossel-item {
+    flex: 0 0 auto;            /* não encolhe e não cresce */
+    height: clamp(180px, 55vh, 620px);
+    aspect-ratio: 16 / 9;      /* proporção 1920×1080 */
+    width: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 2px 6px 14px rgba(0, 0, 0, 0.55);
+    pointer-events: none;      /* a imagem não "rouba" o mouse — o track captura */
+    user-select: none;
+    -webkit-user-drag: none;   /* Safari/Opera: impede arrastar nativo da img */
+}
+
+
+
+
+/* Navegadores com scroll-driven nativo
+   (Chrome 115+, Edge, OperaGX atual, Safari 26+, Firefox 144+) */
+@supports (animation-timeline: view()) {
+    .personagem {
+        animation: personagemSurge linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 120%;
+    }
+
+    /* Esquerdo: fade lento, completa no fim do percurso */
+    .personagem-esq {
+        animation-range: entry 0% entry 200%;
+    }
+
+    /* Direito: fade mais rápido → atinge opacity 1 antes do esquerdo */
+    .personagem-dir {
+        animation-range: entry 0% entry 50%;
+    }
+}
+
+@keyframes personagemSurge {
+    from { opacity: 0; scale: 0.85; }
+    to   { opacity: 1; scale: 1; }
+}
+
+/* Telas pequenas: diminui um pouco */
+@media (max-width: 700px) {
+    .carrossel-track { gap: 16px; }
+    .carrossel-item  { height: clamp(140px, 42vh, 320px); }
+}
+
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
+
+    .section-separacao {
+        height: 50px;
+    }
+
+    .personagem-esq {
+        left: 0;
+        translate: -15% 40%;
+    }
+
+    /* Direita: encostado na borda direita, vazando um pouco */
+    .personagem-dir {
+        right: 0;
+        translate: 15% -90%;
+    }
+
     .logo-img-intro img {
         height: 150px;
         width: 150px;
@@ -248,11 +389,12 @@ section.section-apresentation {
     }
 
     .full-img-sec {
-        width: 100vw;
+        width: 100%;
         height: 30vh;
+        
     }
 
-    .full-img-sec img {
+    .full-img-sec img:not(.personagem) {
     align-self: center;
     justify-self: center;
     align-content: center;
@@ -260,7 +402,7 @@ section.section-apresentation {
     background-size: auto;
     background-position: bottom;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     }
 
     
@@ -303,7 +445,7 @@ section.section-apresentation {
     }
 
     .horizontal-section p {
-        height: 75%;
+        height: auto;
     }
 
     
@@ -321,7 +463,7 @@ section.section-apresentation {
         width: 60%;
     }
 
-    .full-img-sec img {
+    .full-img-sec img:not(.personagem) {
     align-self: center;
     justify-self: center;
     align-content: center;
@@ -338,7 +480,7 @@ section.section-apresentation {
         width: 100%;
     }
 
-    .img-div > img {
+    .img-div > img:not(.personagem) {
         background-size: cover;
         
         height: 95%;
@@ -365,12 +507,12 @@ section.section-apresentation {
         margin: 20px;
     }
 
-    .horizontal-section img {
+    .horizontal-section img:not(.personagem) {
         height: 90%;
         width: 95%;
     }
 
-    .vertical-section img {
+    .vertical-section img:not(.personagem) {
         width: 70%;
     
     }
@@ -385,13 +527,13 @@ section.section-apresentation {
     width: 100%;
     }
 
-    .img-div > img {
+    .img-div > img:not(.personagem) {
     height: 90%;
     width: 60%;
     
     }
 
-    .vertical-section img {
+    .vertical-section img:not(.personagem) {
         width: 50%;
     }
 }
