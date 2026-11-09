@@ -50,13 +50,14 @@ html, body {
 section {
     display: flex;
     flex-flow: column nowrap;
-    height: 60vh;
+    height: 80vh;
     width: 95vw;
     position: relative;
     
 }
 
 p {
+    width: 60%;
     margin: 10px;
     color: aliceblue;
     text-justify: center;
@@ -215,12 +216,21 @@ section.section-apresentation {
     width: 100%;
 }
 
-.img-div > img {
-    height: 200px;
+.img-div > img:not(.personagem) {
+    
     width: 80vw;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     background-size: contain;
-    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
+}
+
+/* Sobrescreve para a proporção 3000x2000 (3:2) */
+.img-div.img-3x2 > img:not(.personagem) {
+    aspect-ratio: 3000 / 2000; 
+    height: auto; /* Deixa a altura fluida baseada na proporção */
+    object-fit: contain; /* 'contain' mostra a imagem inteira, sem cortes. Mude para 'cover' se preferir */
     border-radius: 20px;
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
@@ -265,7 +275,7 @@ section.section-apresentation {
 /* Esquerda: encostado na borda esquerda, vazando um pouco */
 .personagem-esq {
     left: 0;
-    translate: -15% 100%;
+    translate: -15% 50%;
 }
 
 /* Direita: encostado na borda direita, vazando um pouco */
@@ -347,7 +357,7 @@ section.section-apresentation {
     margin-left: -8px;
     border-width: 8px;
     border-style: solid;
-    border-color: rgba(26, 9, 1, 0.95) transparent transparent transparent;
+    border-color: rgba(230, 220, 216, 0.95) transparent transparent transparent;
 }
 
 /* Mostra o popup ao passar o mouse */
@@ -451,12 +461,12 @@ section.carrossel-section {
 
     /* Esquerdo: fade lento, completa no fim do percurso */
     .personagem-esq {
-        animation-range: entry 0% entry 200%;
+        animation-range: entry 90% entry 300%;
     }
 
     /* Direito: fade mais rápido → atinge opacity 1 antes do esquerdo */
     .personagem-dir {
-        animation-range: entry 0% entry 50%;
+        animation-range: entry -20% entry 100%;
     }
 }
 
@@ -564,15 +574,9 @@ section.carrossel-section {
     
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1080px){
 
-    section {
-        height: 80vh;
-    }
-
-    p {
-        width: 60%;
-    }
+    
 
     .full-img-sec img:not(.personagem) {
     align-self: center;
@@ -616,6 +620,7 @@ section.carrossel-section {
     .horizontal-section p {
         
         margin: 20px;
+        width: 60%;
     }
 
     .horizontal-section img:not(.personagem) {
@@ -624,7 +629,7 @@ section.carrossel-section {
     }
 
     .vertical-section img:not(.personagem) {
-        width: 70%;
+        width: 45%;
     
     }
 
