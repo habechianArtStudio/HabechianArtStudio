@@ -275,6 +275,113 @@ section.section-apresentation {
 }
 
 /* ============================================
+   MARCADOR INTERATIVO NO MAPA
+   ============================================ */
+
+.mapa-marcador {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 3px solid var(--cor-botao);
+    border-radius: 50%; /* Transforma em círculo */
+    transform: translate(-50%, -50%); /* Centraliza o círculo no ponto exato do top/left */
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Efeito de pulso (chama a atenção do usuário) */
+.mapa-marcador::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation: pulsarMapa 2s infinite;
+}
+
+@keyframes pulsarMapa {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+/* Quando o mouse passa por cima do círculo */
+.mapa-marcador:hover {
+    background-color: var(--cor-botao-hov);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* O Popup de Informação */
+.mapa-tooltip {
+    position: absolute;
+    bottom: 150%; /* Fica acima do marcador */
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: rgba(26, 9, 1, 0.95);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: max-content;
+    max-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animação elástica */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--cor-text-botao);
+    pointer-events: none; /* O mouse não interage com o popup, só com o círculo */
+}
+
+/* A setinha do popup */
+.mapa-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(26, 9, 1, 0.95) transparent transparent transparent;
+}
+
+/* Mostra o popup ao passar o mouse */
+.mapa-marcador:hover .mapa-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Reset nas tags de dentro do popup para não herdar o estilo dos <p> do site */
+.mapa-tooltip h3 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    font-family: 'Grandstander', 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: var(--cor-text-botao);
+    text-align: center;
+}
+
+.mapa-tooltip p {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    color: #ddd;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+/* ============================================
    CARROSSEL HORIZONTAL COM ARRASTE
    ============================================ */
 
@@ -367,13 +474,17 @@ section.carrossel-section {
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
 
+    .mapa-marcador {
+        display: none;
+    }
+
     .section-separacao {
         height: 50px;
     }
 
     .personagem-esq {
         left: 0;
-        translate: -15% 40%;
+        translate: -15% 10%;
     }
 
     /* Direita: encostado na borda direita, vazando um pouco */
