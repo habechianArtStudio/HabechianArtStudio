@@ -59,7 +59,7 @@ section {
 }
 
 p {
-    width: 40%;
+    width: 50%;
     margin: 10px;
     color: aliceblue;
     text-justify: center;
@@ -209,9 +209,10 @@ section.section-apresentation-mid {
 }
 
 .horizontal-section p {
-    height: auto;
+    border-radius: 25px;
+    height: 100px;
     margin: 20px;
-    width: 50%;
+    width: 90%;
 }
 
 .vertical-section {
@@ -441,6 +442,12 @@ section.section-apresentation-mid {
     height: 72vh;
 }
 
+.secao-construcoes h1 {
+    font-family: 'Grandstander';
+    color: #fff4d6;
+    font-size: 3em;
+}
+
 /* Se a seção for a primeira (texto à esquerda), a imagem vai para a esquerda */
 .secao-construcoes .construcao-info:first-child .construcao-trigger {
     align-self: flex-start;
@@ -557,6 +564,13 @@ section.section-apresentation-mid {
    RESPONSIVIDADE DA SEÇÃO CONSTRUÇÕES
    ============================================ */
 @media (max-width: 1080px) {
+
+    .secao-construcoes h1 {
+    font-family: 'Grandstander';
+    color: #fff4d6;
+    font-size: 2em;
+    }
+
     .construcao-info {
         width: 100%;
         margin-top: 20px;
