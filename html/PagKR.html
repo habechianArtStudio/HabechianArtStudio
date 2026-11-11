@@ -162,6 +162,95 @@
         </div>
     </section>
 
+    <!-- ========================================== -->
+    <!-- NOVA SECTION: ITENS -->
+    <!-- ========================================== -->
+    <section class="section-itens" id="itens">
+        <div class="itens-header">
+            <h1>
+                <span class="material-symbols-outlined">arrow_forward_ios</span> 
+                Jóias Elementares 
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </h1>
+            <p>Passe o mouse sobre os itens para explorá-los em 3D.</p>
+        </div>
+
+        <div class="itens-container">
+            <!-- Item 1 -->
+            <div class="item-wrapper">
+                <div class="item-card">
+                    <img src="../media/jogos/KR/concept/Joias/JoiasAlma.png" alt="Poção" draggable="false">
+                    <div class="item-info"><h3>Alma</h3></div>
+                </div>
+                <!-- Tooltip de Descrição -->
+                <div class="item-tooltip">
+                    <p>Restaura 50 pontos de vida instantaneamente.</p>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="item-wrapper">
+                <div class="item-card">
+                    <img src="../media/jogos/KR/concept/Joias/JoiasMar.png" alt="Escudo" draggable="false">
+                    <div class="item-info"><h3>Escudo</h3></div>
+                </div>
+                <div class="item-tooltip">
+                    <p>Bloqueia o próximo ataque inimigo recebido.</p>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="item-wrapper">
+                <div class="item-card">
+                    <img src="../media/jogos/KR/concept/Joias/JoiasNatureza.png" alt="Moeda" draggable="false">
+                    <div class="item-info"><h3>Moeda</h3></div>
+                </div>
+                <div class="item-tooltip">
+                    <p>Usada para comprar melhorias e novos itens.</p>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="item-wrapper">
+                <div class="item-card">
+                    <img src="../media/jogos/KR/concept/Joias/JoiasVulcao.png" alt="Chave" draggable="false">
+                    <div class="item-info"><h3>Chave</h3></div>
+                </div>
+                <div class="item-tooltip">
+                    <p>Abre portas e baús trancados pelo mapa.</p>
+                </div>
+            </div>
+
+            <div class="item-wrapper">
+                <div class="item-card">
+                    <img src="../media/jogos/KR/concept/Joias/JoiasTerra.png" alt="Chave" draggable="false">
+                    <div class="item-info"><h3>Terra</h3></div>
+                </div>
+                <div class="item-tooltip">
+                    <p>Abre portas e baús trancados pelo mapa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="section-apresentation-mid">
+        <div class="text-block-intro">
+            <h1>As Jóias</h1>
+            <p>Tem a capacidade de fornecer certas habilidades de acordo com cada elemento</p>
+        </div>
+        <div class="">
+            <img src="../media/jogos/KR/concept/icones/3.png" alt="King Rush Logo image">
+        </div>
+        
+    </section>
+
+    <section class="full-img-sec-gradient">
+        <div>
+            <img src="../media/jogos/KR/concept/4.png" alt="">  <!-- Ilustração final do Mapa -->
+        </div>
+    </section>
+    
+
     <section class="section-separacao">
         <h1> 
             <span class="material-symbols-outlined">
@@ -539,6 +628,69 @@
             track.addEventListener('pointerup', endDrag);
             track.addEventListener('pointercancel', endDrag);
             track.addEventListener('dragstart', (e) => e.preventDefault());
+        });
+    })();
+
+        /* ==========================================
+       LÓGICA: CARTÕES 3D (SECTION ITENS)
+       ========================================== */
+    (function () {
+        // Se for dispositivo touch (sem mouse), não aplica o efeito 3D
+        if (window.matchMedia("(hover: none)").matches) return;
+
+        const itemCards = document.querySelectorAll('.item-card');
+
+        itemCards.forEach(card => {
+            let requestId = null;
+            let isHovering = false;
+
+            card.addEventListener('mousemove', (e) => {
+                isHovering = true;
+                
+                if (!requestId) {
+                    requestId = requestAnimationFrame(() => updateTilt(e, card));
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                isHovering = false;
+                // Reseta a rotação e remove o zoom
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                // Coloca a transição suave de volta
+                card.style.transition = "transform 0.5s ease-out";
+            });
+
+            card.addEventListener('mouseenter', () => {
+                // Remove a transição para que o movimento acompanhe o mouse em tempo real
+                card.style.transition = "transform 0.1s ease-out"; 
+            });
+
+            function updateTilt(e, element) {
+                requestId = null;
+                if (!isHovering) return;
+
+                const rect = element.getBoundingClientRect();
+                
+                // Calcula a posição do mouse em relação ao centro do cartão (-1 a 1)
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const mouseX = (x - centerX) / centerX;
+                const mouseY = (y - centerY) / centerY;
+
+                // Define a força da inclinação (15 graus)
+                const maxRotation = 15; 
+
+                // Inverte os eixos para parecer natural
+                const rotateX = -mouseY * maxRotation;
+                const rotateY = mouseX * maxRotation;
+
+                // Aplica o transform (incluindo um leve zoom de 1.05 para dar destaque)
+                element.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            }
         });
     })();
     </script>

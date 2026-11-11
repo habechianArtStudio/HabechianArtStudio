@@ -151,6 +151,39 @@ section.section-apresentation {
     color: rgb(236, 236, 236);
 }
 
+section.section-apresentation-mid {
+    
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    background-image:linear-gradient(rgba(18, 63, 33, 0.692), rgba(0, 0, 0, 0.445)), url(../media/jogos/KR/concept/7.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-apresentation-mid img {
+    aspect-ratio: 1;
+    height: 500px;
+    width: auto;
+}
+
+.section-apresentation-mid h1 {
+    margin: 10px;
+    font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    color: aliceblue;
+    text-shadow: 1px 2px 4px var(--cor-botao-sombra);
+}
+
+.section-apresentation-mid p {
+    color: rgb(236, 236, 236);
+}
+
+
 .horizontal-section {
         height: 60vh;
         display: flex;
@@ -277,6 +310,22 @@ section.section-apresentation {
     box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.486);
 }
 
+.full-img-sec-gradient {
+    width: 100dvw;
+    height: 108vh;
+    overflow: clip;
+}
+
+.full-img-sec-gradient img:not(.personagem) {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+    
+}
+
 .full-img-sec {
         width: 100dvw;
         height: 108vh;
@@ -311,6 +360,188 @@ section.section-apresentation {
 .img-transparent img {
     background-color: rgb(26, 9, 1);
 }
+
+/* ============================================
+   SEÇÃO ITENS (Cartões 3D Interativos + Tooltip)
+   ============================================ */
+
+.section-itens {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    padding: 60px 0;
+    /* Aumentado para o tooltip não bater na próxima seção */
+    padding-bottom: 150px; 
+    position: relative;
+    z-index: 2;
+}
+
+.itens-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.itens-header h1 {
+    font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
+    color: aliceblue;
+    text-shadow: 1px 3px 5px rgb(51, 20, 2);
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.itens-header p {
+    color: var(--cor-text-botao);
+    font-size: 1.1em;
+    width: auto;
+    background: none;
+    box-shadow: none;
+}
+
+.itens-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o topo dos cartões */
+    gap: 30px;
+    width: 90%;
+    max-width: 1300px;
+    perspective: 1200px; 
+}
+
+/* NOVO: Envelope que segura o cartão e o tooltip */
+.item-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-card {
+    width: 100%; /* Ocupa todo o espaço do wrapper */
+    aspect-ratio: 1 / 1;
+    background-color: rgb(43, 26, 5);
+    border: 3px solid  rgb(85, 68, 46);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                box-shadow 0.5s ease;
+}
+
+.item-wrapper:hover .item-card {
+    box-shadow: 0px 20px 40px rgba(150, 100, 9, 0.8), 0 0 25px rgb(231, 160, 79);
+    border-color: beige;
+}
+
+.item-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: radial-gradient(circle, rgba(88, 43, 12, 0.2) 0%, transparent 70%);
+    pointer-events: none; 
+    transform: translateZ(40px) scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    text-align: center;
+    transform: translateZ(20px);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.item-wrapper:hover .item-info {
+    opacity: 1;
+}
+
+.item-info h3 {
+    color: var(--cor-text-botao);
+    font-family: 'Grandstander', 'Arial', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ============================================
+   TEXTO EMBAIXO DO CARD (Totalmente Estático)
+   ============================================ */
+.item-tooltip {
+    position: relative; 
+    margin-top: 20px; 
+    background-color: rgba(26, 9, 1, 0.95);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    
+    /* Sem animações ou opacidade dinâmica */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgb(90, 66, 36);
+    pointer-events: none; 
+    text-align: center;
+}
+
+/* Reseta o estilo do parágrafo global dentro do tooltip */
+.item-tooltip p {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100px;
+    align-content: center;
+    justify-content: center;
+    background: none;
+    box-shadow: none;
+    color: #8a5c42;
+    font-size: 0.9em;
+    font-family: 'Grandstander', 'Arial', sans-serif;
+    line-height: 1.3;
+}
+
+/* Mostra o tooltip ao passar o mouse no Wrapper inteiro */
+
+.item-wrapper:hover .item-tooltip {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(94, 51, 16);
+    border-color: beige;
+    box-shadow: 0 5px 15px rgba(218, 194, 167, 0.8);
+    border: 1px solid rgb(233, 215, 181);
+}
+
+.item-wrapper:hover .item-card {
+    background-color: #9c6735;
+}
+
+.item-wrapper:hover .item-tooltip p {
+    opacity: 1;
+    visibility: visible;
+    color: #ebd5bd;
+    
+    
+}
+
+
+
 
 /* ============================================
    PERSONAGEM ANIMADO NO SCROLL
@@ -579,13 +810,13 @@ section.carrossel-section {
     /* Esquerdo */
     .personagem-esq {
         /* MUDANÇA AQUI: Manteve o entry 90% e adicionou o exit 100% */
-        animation-range: entry 110% exit 20%;
+        animation-range: entry 80% exit -20%;
     }
 
     /* Direito */
     .personagem-dir {
         /* MUDANÇA AQUI: Manteve o entry -20% e adicionou o exit 100% */
-        animation-range: entry -80% exit 100%;
+        animation-range: entry 40% exit 100%;
     }
 }
 
@@ -604,6 +835,44 @@ section.carrossel-section {
 
 /*QUANDO FICAR PEQUENA*/
 @media (max-width: 1080px) {
+
+    .itens-container {
+        flex-wrap: wrap;
+        perspective: none; /* Desativa o 3D no touch */
+        gap: 20px; /* Diminui o espaço entre os cards */
+    }
+    
+    .item-wrapper {
+        flex: 0 0 calc(50% - 10px); /* 2 cards por linha */
+    }
+    
+    .item-card {
+        transform: none !important; /* Desativa rotação do JS */
+    }
+
+    .itens-header {
+        font-size: 0.3em;
+    }
+
+    .item-tooltip {
+        display: none;
+    }
+
+    .full-img-sec-gradient {
+        height: 30vh;
+    }
+
+    .section-apresentation-mid {
+        height: 30vh;
+    }
+
+    .section-apresentation-mid img {
+        height: 150px;
+    }
+
+    .section-itens p {
+        font-size: 2.5em;
+    }
 
     .mapa-marcador {
         display: none;
