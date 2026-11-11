@@ -416,10 +416,16 @@ section.section-apresentation {
 }
 
 .skills-sec {
+    height: 55vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     
+}
+
+.skill-2D-img img {
+    border-radius: 25px;
+    box-shadow: 2px 3px 15px rgba(34, 11, 0, 0.596);
 }
 
 .skills-sec h1 {
@@ -449,6 +455,7 @@ section.section-apresentation {
 .skill-2D-img {
     height: 10%;
     width: 100%;
+    box-shadow: 2px 2px 5px rgba(34, 11, 0, 0.596);
 }
 
 .skills-sec {
