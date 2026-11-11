@@ -455,6 +455,7 @@ section.section-apresentation-mid {
     transition: transform 0.3s ease;
 }
 
+
 .item-info {
     position: absolute;
     bottom: 0;
@@ -476,7 +477,7 @@ section.section-apresentation-mid {
     color: var(--cor-text-botao);
     font-family: 'Grandstander', 'Arial', sans-serif;
     font-size: 1.8em;
-    margin: 0;
+    margin-right: 60px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -528,8 +529,18 @@ section.section-apresentation-mid {
     border: 1px solid rgb(233, 215, 181);
 }
 
+.item-wrapper:hover .item-info h3 {
+    color: rgb(255, 216, 164);
+    font-family: 'Grandstander', 'Arial', sans-serif;
+    font-size: 2em;
+    margin-right: 60px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 4px 0px #3d1a05;
+}
+
 .item-wrapper:hover .item-card {
-    background-color: #9c6735;
+    background-color: #d1a276;
 }
 
 .item-wrapper:hover .item-tooltip p {
@@ -831,6 +842,16 @@ section.carrossel-section {
 @media (max-width: 700px) {
     .carrossel-track { gap: 16px; }
     .carrossel-item  { height: clamp(140px, 42vh, 320px); }
+
+    .itens-container {
+        flex-wrap: wrap;
+        perspective: none; /* Desativa o 3D no touch */
+        gap: 20px; /* Diminui o espaço entre os cards */
+    }
+
+    .item-wrapper {
+        flex: 0 0 calc(30% - 30px); /* 2 cards por linha */
+    }
 }
 
 /*QUANDO FICAR PEQUENA*/
@@ -841,6 +862,7 @@ section.carrossel-section {
         perspective: none; /* Desativa o 3D no touch */
         gap: 20px; /* Diminui o espaço entre os cards */
     }
+
     
     .item-wrapper {
         flex: 0 0 calc(50% - 10px); /* 2 cards por linha */
@@ -852,6 +874,13 @@ section.carrossel-section {
 
     .itens-header {
         font-size: 0.3em;
+    }
+
+    .item-info h3 {
+        font-size: 0.9em;
+        align-self: center;
+        margin-right: 50px;
+        justify-self: center;
     }
 
     .item-tooltip {
