@@ -113,6 +113,23 @@ section h1 {
     text-justify: center;
 }
 
+.blender-sec {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    
+}
+
+.blender-sec p {
+    width: 30%;
+}
+
+.blender-sec h1 {
+    font-size: 2em;
+    color: #b65c09;
+    text-shadow: -2px 1px 0px #5f2701;
+}
+
 .logo-blender {
     background-image: url(../media/interface/LogoBlender.png);
     background-size: cover;
@@ -122,8 +139,8 @@ section h1 {
     justify-items: center;
     align-content: center;
     justify-content: center;
-    width: 120px; 
-    height: 120px;
+    width: 200px; 
+    height: 200px;
 }
 
 .titulos {

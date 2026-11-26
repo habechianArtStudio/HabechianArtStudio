@@ -90,6 +90,43 @@ p {
     min-height: 20vh;
 }
 
+.full-img-vertical-sec {
+    height: 145vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.full-img-vertical-sec img {
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    aspect-ratio: 9/13;
+    height: auto;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.685);
+    
+}
+
+.full-img-vertical-sec div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.vertical-section {
+        height: 100vh;
+        
+    
+}
+
+.horizontal-section div {
+    justify-content: center;
+    align-content: center;
+}
+
 
 .logo-div {
     display: flex;
@@ -102,6 +139,10 @@ p {
     width: 100px;
 
     transition: all .5s;
+}
+
+.img-3x2 {
+    aspect-ratio: 3/2;
 }
 
 .logo-div:hover {
@@ -167,8 +208,8 @@ section.section-apresentation {
 }
 
 .logo-img-intro img {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     
 }
 
@@ -377,6 +418,8 @@ section.section-apresentation {
 
     .vertical-section img {
         width: 70%;
+        height: 100%;
+        aspect-ratio: 16/9;
     
     }
 

@@ -65,7 +65,7 @@ p {
     padding: 10px;
     align-self: center;
     justify-self: center;
-    height: 20%;
+    height: auto;
     width: 60vw;
     font-family: 'Grandstander Bold', 'Arial', 'Verdana';
     font-size: 1.2em;
@@ -243,7 +243,7 @@ section.section-apresentation {
 }
 
 .vertical-section {
-    height: 90vh;
+    height: 100vh;
 }
 
 .img-div > img {
