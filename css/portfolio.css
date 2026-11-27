@@ -113,6 +113,7 @@ section h1 {
     text-justify: center;
 }
 
+
 .blender-sec {
     display: flex;
     flex-flow: row nowrap;
@@ -120,14 +121,20 @@ section h1 {
     
 }
 
+.description-div {
+    width: 40%;
+}
+
+
 .blender-sec p {
-    width: 30%;
+    width: 80%;
+    font-size: 1.2em;
 }
 
 .blender-sec h1 {
     font-size: 2em;
-    color: #b65c09;
-    text-shadow: -2px 1px 0px #5f2701;
+    color: #8b3a04;
+    
 }
 
 .logo-blender {
@@ -438,6 +445,10 @@ section.section-apresentation {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     
+}
+
+.skills-sec p {
+    width: 80%;
 }
 
 .skill-2D-img img {
