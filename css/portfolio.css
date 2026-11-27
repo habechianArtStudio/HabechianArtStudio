@@ -113,6 +113,9 @@ section h1 {
     text-justify: center;
 }
 
+h1 {
+    color: rgb(99, 43, 9);
+}
 
 .blender-sec {
     display: flex;
@@ -171,7 +174,7 @@ section h1 {
 
 p {
     margin: 10px;
-    color: rgb(29, 16, 8);
+    color: rgb(99, 43, 9);
     text-justify: center;
     text-align: center;
     padding: 10px;
@@ -179,7 +182,7 @@ p {
     justify-self: center;
     width: 60vw;
     font-family: 'Grandstander Bold', 'Arial', 'Verdana';
-    font-size: .8em;
+    font-size: 1.1em;
     background-color: var(--cor-text);
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(22, 15, 1, 0.705);
@@ -296,7 +299,7 @@ section.section-apresentation {
     font-family: 'Grandstander', 'Grandstander ExtraBold', 'Arial', 'Verdana';
     width: 50vw;
     height: auto;     /* Remove a altura de 60% e deixa automático */
-    color: rgb(255, 236, 224);
+    color: rgb(99, 43, 9);
     padding: 30px;    /* Aumenta o espaçamento interno para a caixa ficar grande */
     display: flex;    /* Transforma a caixa em flexbox */
     justify-content: center; /* Centraliza o texto horizontalmente */
@@ -382,7 +385,7 @@ section.section-apresentation {
 
 .section-separacao {
     font-family: 'Grandstander ExtraBold', 'Arial', 'Verdana';
-    color: aliceblue;
+    color: rgb(244, 250, 255);
     text-shadow: 1px 2px 0px rgb(51, 20, 2);
     display: flex;
     flex-flow: row-reverse nowrap;
@@ -398,6 +401,10 @@ section.section-apresentation {
     background-color: #855d32;
     background-position: bottom;
     box-shadow: 0px 5px 10px rgba(36, 18, 2, 0.527);
+}
+
+.section-separacao h1 {
+    color: rgb(248, 229, 208);
 }
 
 .text-block-intro {
